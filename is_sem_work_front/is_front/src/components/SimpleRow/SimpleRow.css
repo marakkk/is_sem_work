@@ -1,0 +1,8 @@
+.simple-row {
+    display: flex;
+    flex-direction: row;
+
+    &__element {
+
+    }
+}

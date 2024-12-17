@@ -1,0 +1,72 @@
+/* General container styling */
+.approval-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.title {
+    text-align: center;
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ced4da;
+    padding-bottom: 10px;
+}
+
+/* List of users */
+.user-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual user item */
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.user-item:hover {
+    background-color: #e9ecef;
+}
+
+/* Username text */
+.username {
+    font-size: 16px;
+    color: #495057;
+}
+
+/* Approve label and checkbox */
+.approve-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #495057;
+    cursor: pointer;
+}
+
+.approve-checkbox {
+    margin-right: 8px;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* Checkbox transition */
+.approve-checkbox:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f3bf68b-1b7c-49c8-8c9e-03a264329802" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_sem_work_back/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_sem_work_front/.idea/.gitignore" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;marakkk&quot;
+  }
+}</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:marakkk/is_sem_work.git&quot;,
+    &quot;accountId&quot;: &quot;98c69f5d-169b-44b4-ac83-874c10ae3190&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2mhIs6RseOOzcCWjFxJ7sLilfXu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/marakkk/is_sem_work/is_sem_work_front",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.install.executor": "Run",
+    "npm.start.executor": "Run",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "ts.external.directory.path": "/home/marakkk/idea/ideaIU-2024.2.2/idea-IU-242.22855.74/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Moderator\IS\is_lab_1_front\is_lab_1\src\components" />
+      <recent name="$PROJECT_DIR$/is_lab_1/src/components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="install" type="js.build_tools.npm" temporary="true">
+      <package-json value="$PROJECT_DIR$/is_lab_2/package.json" />
+      <command value="install" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="install" type="js.build_tools.npm" temporary="true">
+      <package-json value="$PROJECT_DIR$/is_lab_2/package.json" />
+      <command value="install" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/is_lab_2/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/is_lab_2/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.install" />
+      <item itemvalue="npm.start" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.install" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f3bf68b-1b7c-49c8-8c9e-03a264329802" name="Changes" comment="" />
+      <created>1727522584769</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727522584769</updated>
+      <workItem from="1727522585813" duration="2829000" />
+      <workItem from="1727675076083" duration="612000" />
+      <workItem from="1727773498462" duration="2000" />
+      <workItem from="1727872057357" duration="353000" />
+      <workItem from="1727896359613" duration="5695000" />
+      <workItem from="1727967453268" duration="6702000" />
+      <workItem from="1727981392339" duration="37000" />
+      <workItem from="1727982222318" duration="2272000" />
+      <workItem from="1727995438625" duration="3209000" />
+      <workItem from="1728028321009" duration="6509000" />
+      <workItem from="1728051534059" duration="16824000" />
+      <workItem from="1728113348860" duration="12123000" />
+      <workItem from="1728393297694" duration="388000" />
+      <workItem from="1728467486484" duration="7558000" />
+      <workItem from="1728481848335" duration="5771000" />
+      <workItem from="1728643767589" duration="12165000" />
+      <workItem from="1728740467043" duration="15279000" />
+      <workItem from="1728814305036" duration="44394000" />
+      <workItem from="1729154917338" duration="4349000" />
+      <workItem from="1729167453840" duration="734000" />
+      <workItem from="1729253129901" duration="23000" />
+      <workItem from="1729260264783" duration="777000" />
+      <workItem from="1729282371092" duration="4974000" />
+      <workItem from="1729289534714" duration="1075000" />
+      <workItem from="1729322365985" duration="2000" />
+      <workItem from="1729324144740" duration="2456000" />
+      <workItem from="1729334836368" duration="681000" />
+      <workItem from="1730463963189" duration="5000" />
+      <workItem from="1730464001482" duration="4285000" />
+      <workItem from="1731140745071" duration="630000" />
+      <workItem from="1731230775970" duration="9780000" />
+      <workItem from="1732296376237" duration="1401000" />
+      <workItem from="1732300700519" duration="7811000" />
+      <workItem from="1732796167406" duration="70000" />
+      <workItem from="1732863019223" duration="3777000" />
+      <workItem from="1732868865839" duration="9114000" />
+      <workItem from="1732887559447" duration="1581000" />
+      <workItem from="1732951299449" duration="11053000" />
+      <workItem from="1733664427603" duration="11193000" />
+      <workItem from="1733736890334" duration="1685000" />
+      <workItem from="1734032039848" duration="2297000" />
+      <workItem from="1734100168186" duration="73000" />
+      <workItem from="1734106402581" duration="2148000" />
+      <workItem from="1734125370762" duration="673000" />
+      <workItem from="1734167787892" duration="1332000" />
+      <workItem from="1734172184184" duration="2934000" />
+      <workItem from="1734180150567" duration="139000" />
+      <workItem from="1734180462000" duration="4403000" />
+      <workItem from="1734366921821" duration="2295000" />
+      <workItem from="1734371891515" duration="1047000" />
+      <workItem from="1734419708189" duration="8439000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="dev" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

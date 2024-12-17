@@ -1,0 +1,45 @@
+.filters-and-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+    overflow-x: auto; /* Добавляем горизонтальный скролл */
+    padding-bottom: 1rem; /* Пространство для скроллбара */
+    scrollbar-width: thin; /* Уменьшение ширины скроллбара для Firefox */
+    scrollbar-color: #007bff #f0f0f0; /* Цвета скроллбара для Firefox */
+}
+
+.filters-and-actions::-webkit-scrollbar {
+    height: 8px; /* Высота скроллбара */
+}
+
+.filters-and-actions::-webkit-scrollbar-thumb {
+    background-color:  #007bff; /* Цвет ползунка скроллбара */
+    border-radius: 4px;
+}
+
+.filters-and-actions::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Цвет фона скроллбара */
+}
+
+.filter-container {
+    margin-right: 1rem;
+    flex: 0 0 auto; /* Устанавливаем фиксированную ширину контейнеров */
+    min-width: 180px; /* Минимальная ширина для каждого фильтра */
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    border-color:  #007bff;
+    outline: none;
+}

@@ -1,0 +1,53 @@
+.edit-form{
+    max-height: 1200px;
+    overflow: hidden;
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+
+
+    &--hidden{
+        max-height: 0;
+    }
+
+    &__form {
+        overflow-y: auto; /* Включаем вертикальную прокрутку */
+        height: max-content;
+    }
+}
+
+.form{
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+
+    &__couple{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    &__label{
+        font-size: 0.8rem;
+        margin-bottom: 0.2rem;
+    }
+
+    &__input{
+        border-radius: 0.6rem;
+        padding: 0.8rem 0.8rem;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .simple-row &__input--fixed{
+        margin-right: 1rem;
+    }
+
+    &__input--fixed{
+        width: 180px;
+    }
+
+    &__button{
+        margin-top: 1rem;
+    }
+
+}
+

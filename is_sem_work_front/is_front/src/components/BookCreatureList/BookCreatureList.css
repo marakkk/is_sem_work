@@ -1,0 +1,174 @@
+.book-creature-list {
+    margin: 2rem 0rem 0rem 1rem;
+    width: 100%;
+    overflow-x: hidden;
+
+    .filters-and-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .filter-container {
+            margin-right: 1rem;
+            flex: 1;
+
+            input {
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #ddd;
+                border-radius: 0.25rem;
+                height: 40px;
+                box-sizing: border-box;
+
+                &:focus {
+                    border-color: #0056b3; /* Change border color on focus */
+                    outline: none; /* Remove outline */
+                }
+            }
+        }
+
+        .actions-block {
+            display: flex;
+            gap: 1rem;
+
+            .form__button {
+                padding: 0.5rem 1rem;
+                height: 30px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background 0.3s;
+                background-color: #007bff;
+                color: white;
+
+                &:hover {
+                    background-color: #0056b3;
+                }
+
+                &:disabled {
+                    background-color: #ccc;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+
+    }
+
+    .table-container {
+        overflow-x: auto;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .creature-details-table th {
+        background-color: #9fa1a4; /* Синий фон */
+        color: white; /* Белый текст */
+        padding: 15px; /* Увеличенный отступ для удобства */
+        font-size: 16px; /* Более крупный текст */
+        text-align: left; /* Выравнивание текста */
+    }
+
+
+    .creature-details-table th::after {
+        content: ""; /* Псевдоэлемент без содержимого */
+        position: absolute; /* Абсолютное позиционирование */
+        right: 10px; /* Позиционируем стрелочку справа */
+        top: 50%; /* Центрируем по вертикали */
+        transform: translateY(-50%); /* Сдвигаем по вертикали для точного центрирования */
+        border-left: 5px solid transparent; /* Левая сторона для треугольника */
+        border-right: 5px solid transparent; /* Правая сторона для треугольника */
+    }
+
+    /* Стили для стрелочек при сортировке по возрастанию */
+    .creature-details-table th.sort-asc::after {
+        border-top: 5px solid #007bff; /* Цвет стрелочки для сортировки по возрастанию */
+    }
+
+    /* Стили для стрелочек при сортировке по убыванию */
+    .creature-details-table th.sort-desc::after {
+        border-bottom: 5px solid #007bff; /* Цвет стрелочки для сортировки по убыванию */
+        top: calc(50% + 5px); /* Сдвигаем вниз для отображения вниз стрелочки */
+    }
+
+
+    .pagination-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .form__buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .no-selection-message {
+        color: red;
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+
+    .filters-menu {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        select, input {
+            margin-right: 10px;
+            padding: 0.5rem; /* Add padding to select and input */
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+
+            &:focus {
+                border-color: #0056b3; /* Change border color on focus */
+                outline: none; /* Remove outline */
+            }
+        }
+    }
+
+    .sortable {
+        cursor: pointer;
+    }
+
+    .sort-asc::after {
+        content: '▲';
+        margin-left: 5px;
+    }
+
+    .sort-desc::after {
+        content: '▼';
+        margin-left: 5px;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .pagination__button {
+        padding: 8px 16px;
+        margin: 0 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .pagination__button:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+    }
+
+    .pagination__info {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+
+}
