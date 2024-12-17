@@ -43,6 +43,7 @@ public class AuthController {
 
             Map<String, Object> responseBody = new HashMap<>();
             responseBody.put("token", token);
+            responseBody.put("role", loggedInUser.getRole());
 
             return ResponseEntity.ok(responseBody);
         } else {
