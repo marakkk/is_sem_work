@@ -47,11 +47,6 @@ public class AuthService implements UserDetailsService {
         return userRepository.findByUsername(username);
     }
 
-    /*@Transactional(readOnly = true)
-    public List<Users> findAllAdminUsers() {
-        return userRepository.findByIsAdminTrue();
-    }*/
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return (UserDetails) userRepository.findByUsername(username);

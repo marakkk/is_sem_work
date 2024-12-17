@@ -108,9 +108,7 @@ function RegisterForm() {
                     <button type="submit" disabled={isSubmitDisabled}>Зарегистрироваться</button>
 
                     {isSubmitDisabled && (
-                        <div className="error-summary">
-                            {!role && <p className="error-message">Выберите роль перед отправкой формы</p>}
-                        </div>
+                        !role && <p className="error-message">Выберите роль перед отправкой формы</p>
                     )}
 
                     <p className="account-message">Уже есть аккаунт? <a href="/login">Войти</a></p>

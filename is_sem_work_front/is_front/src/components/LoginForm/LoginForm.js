@@ -5,7 +5,6 @@ import './LoginForm.css';
 function LoginForm({ onLogin }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [role, setRole] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
@@ -14,7 +13,7 @@ function LoginForm({ onLogin }) {
         const response = await fetch('http://localhost:8080/api/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password, role }),
+            body: JSON.stringify({ username, password }),
         });
 
         if (response.ok) {
@@ -26,7 +25,14 @@ function LoginForm({ onLogin }) {
             localStorage.setItem('role', role);
 
             onLogin(token);
-            navigate('/dreams');
+
+            if (role === 'ADMIN') {
+                navigate('/admin-dashboard');
+            } else if (role === 'CUSTOMER') {
+                navigate('/user-dashboard');
+            } else if (role === 'ARCHITECT'){
+                navigate('/home');
+            }
         } else {
             setErrorMessage('Не удалось войти. Проверьте логин и пароль.');
         }

@@ -5,9 +5,446 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3bf68b-1b7c-49c8-8c9e-03a264329802" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/is_sem_work_back/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/is_sem_work_front/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/controller/DreamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/controller/DreamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/acorn.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/ansi-html" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/ansi-html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/ansi-html.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/ansi-html.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/autoprefixer" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/autoprefixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/autoprefixer.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/autoprefixer.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/babylon" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/babylon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/babylon.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/babylon.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/browserslist.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/css-blank-pseudo" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/css-blank-pseudo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/css-blank-pseudo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/css-blank-pseudo.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/css-has-pseudo" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/css-has-pseudo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/css-has-pseudo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/css-has-pseudo.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/css-prefers-color-scheme" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/css-prefers-color-scheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/css-prefers-color-scheme.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/css-prefers-color-scheme.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/cssesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/cssesc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/detect" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/detect" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/detect-port" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/detect-port" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/detect-port.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/detect-port.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/detect.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/detect.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/ejs" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/ejs.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/ejs.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/envinfo" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/envinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/envinfo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/envinfo.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/escodegen" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/escodegen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/escodegen.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/escodegen.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/esgenerate" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/esgenerate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/esgenerate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/esgenerate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/eslint.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/esparse" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/esparse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/esparse.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/esparse.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/esvalidate" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/esvalidate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/esvalidate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/esvalidate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/flat" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/flat.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/flat.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/he" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/he" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/he.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/he.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/html-minifier-terser" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/html-minifier-terser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/html-minifier-terser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/html-minifier-terser.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/import-local-fixture" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/import-local-fixture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/import-local-fixture.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/import-local-fixture.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/is-docker" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/is-docker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/is-docker.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/is-docker.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/is-inside-container" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/is-inside-container" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/is-inside-container.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/is-inside-container.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jake" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/jake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jake.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jake.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jest" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/jest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jest.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jest.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jiti" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/jiti" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jiti.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jiti.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/js-yaml" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/js-yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/js-yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/js-yaml.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/jsesc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/json5.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/loose-envify" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/loose-envify.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/loose-envify.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/lz-string" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/lz-string" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/lz-string.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/lz-string.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/mime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/mime.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/mkdirp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/mkdirp.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/mkdirp.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/multicast-dns" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/multicast-dns" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/multicast-dns.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/multicast-dns.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/nanoid" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/nanoid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/nanoid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/nanoid.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/node-which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/parser.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/react-scripts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/react-scripts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/react-scripts.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/react-scripts.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/regjsparser" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/regjsparser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/regjsparser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/regjsparser.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/resolve" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/resolve.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/resolve.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/rimraf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/rimraf.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/rimraf.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/rollup" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/rollup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/rollup.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/rollup.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/sass" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/sass.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/sass.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/sucrase-node.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/sucrase-node.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/sucrase.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/sucrase.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/svgo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/svgo.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/tailwind.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/tailwind.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/tailwindcss.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/tailwindcss.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/terser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/terser.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/tsc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/tsc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/tsserver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/tsserver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/update-browserslist-db.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/update-browserslist-db.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/uuid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/uuid.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/webpack-cli.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/webpack-cli.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/webpack-dev-server.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/webpack-dev-server.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/webpack.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/.bin/webpack.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/core/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/core/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/core/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/core/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/core/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/core/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/eslint-parser/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/eslint-parser/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/eslint-parser/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/eslint-parser/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/eslint-parser/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/eslint-parser/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/.bin/browserslist.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/browserslist/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/browserslist/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-compilation-targets/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-class-features-plugin/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-class-features-plugin/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-class-features-plugin/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/helper-create-regexp-features-plugin/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/parser/bin/babel-parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/parser/bin/babel-parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/plugin-transform-runtime/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/plugin-transform-runtime/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/preset-env/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/preset-env/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/preset-env/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/preset-env/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@babel/preset-env/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@babel/preset-env/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@eslint/eslintrc/node_modules/.bin/js-yaml" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@eslint/eslintrc/node_modules/.bin/js-yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@eslint/eslintrc/node_modules/.bin/js-yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@eslint/eslintrc/node_modules/.bin/js-yaml.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@eslint/eslintrc/node_modules/js-yaml/bin/js-yaml.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@eslint/eslintrc/node_modules/js-yaml/bin/js-yaml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@isaacs/cliui/node_modules/wrap-ansi/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@isaacs/cliui/node_modules/wrap-ansi/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-node-resolve/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-node-resolve/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-node-resolve/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-node-resolve/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-node-resolve/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-node-resolve/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-replace/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-replace/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-replace/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-replace/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-replace/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@rollup/plugin-replace/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@rollup/pluginutils/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@rollup/pluginutils/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@rollup/pluginutils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@rollup/pluginutils/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@rollup/pluginutils/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@rollup/pluginutils/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/html-minifier-terser/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/html-minifier-terser/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/html-minifier-terser/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/html-minifier-terser/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/html-minifier-terser/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/html-minifier-terser/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/html-minifier-terser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/html-minifier-terser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/jest/node_modules/pretty-format/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/jest/node_modules/pretty-format/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/doc.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/doc.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-angular.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-angular.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-babel.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-babel.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-espree.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-espree.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-flow.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-flow.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-glimmer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-glimmer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-graphql.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-graphql.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-html.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-html.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-markdown.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-markdown.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-meriyah.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-meriyah.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-postcss.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-postcss.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-typescript.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-typescript.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-yaml.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/parser-yaml.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/standalone.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/prettier/standalone.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/retry/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/retry/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/retry/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/retry/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/retry/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/retry/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/retry/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/retry/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/matchers.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/matchers.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/@types/testing-library__jest-dom/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/acorn-globals/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/acorn-globals/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/acorn-globals/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/acorn-globals/node_modules/.bin/acorn.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/acorn-globals/node_modules/acorn/bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/acorn-globals/node_modules/acorn/bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/acorn/bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/acorn/bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/ansi-html-community/bin/ansi-html" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/ansi-html-community/bin/ansi-html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/ansi-html/bin/ansi-html" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/ansi-html/bin/ansi-html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/autoprefixer/bin/autoprefixer" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/autoprefixer/bin/autoprefixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/axobject-query/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/axobject-query/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-core/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/babel-core/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-core/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-core/node_modules/.bin/json5.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-core/node_modules/json5/lib/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/babel-core/node_modules/json5/lib/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-generator/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/babel-generator/node_modules/.bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-generator/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-generator/node_modules/.bin/jsesc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-generator/node_modules/jsesc/bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/babel-generator/node_modules/jsesc/bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-plugin-polyfill-corejs2/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babel-plugin-polyfill-corejs2/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/babel-plugin-polyfill-corejs2/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/babylon/bin/babylon.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/babylon/bin/babylon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/browserslist/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/browserslist/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/entries.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/entries.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/external.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/external.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/modules-by-versions.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/modules-by-versions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/modules.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/core-js-compat/modules.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/css-blank-pseudo/dist/cli.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/css-blank-pseudo/dist/cli.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/css-has-pseudo/dist/cli.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/css-has-pseudo/dist/cli.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/css-prefers-color-scheme/dist/cli.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/css-prefers-color-scheme/dist/cli.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/css-tree/data/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/css-tree/data/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/cssesc/bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/cssesc/bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/csso/node_modules/css-tree/data/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/csso/node_modules/css-tree/data/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/damerau-levenshtein/scripts/update-changelog.sh" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/damerau-levenshtein/scripts/update-changelog.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/deep-equal/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/deep-equal/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/deep-equal/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/deep-equal/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/deep-equal/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/deep-equal/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/detect-port-alt/bin/detect-port" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/detect-port-alt/bin/detect-port" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/didyoumean/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/didyoumean/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/ejs/bin/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/ejs/bin/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/ejs/lib/ejs.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/ejs/lib/ejs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/emojis-list/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/emojis-list/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/emojis-list/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/emojis-list/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/envinfo/dist/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/envinfo/dist/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/escodegen/bin/escodegen.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/escodegen/bin/escodegen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/escodegen/bin/esgenerate.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/escodegen/bin/esgenerate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-import/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-import/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-import/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-import/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-import/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-import/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/lib/rules/jsx-curly-brace-presence.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/lib/rules/jsx-curly-brace-presence.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/.bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/.bin/resolve" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/.bin/resolve.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/.bin/resolve.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/resolve/bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/resolve/bin/resolve" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint-plugin-react/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint/bin/eslint.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint/bin/eslint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint/node_modules/.bin/js-yaml" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint/node_modules/.bin/js-yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint/node_modules/.bin/js-yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint/node_modules/.bin/js-yaml.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/eslint/node_modules/js-yaml/bin/js-yaml.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/eslint/node_modules/js-yaml/bin/js-yaml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/esprima/bin/esparse.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/esprima/bin/esparse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/esprima/bin/esvalidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/esprima/bin/esvalidate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/esrecurse/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/esrecurse/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/exit/test/fixtures/create-files.sh" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/exit/test/fixtures/create-files.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/flat/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/flat/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/global-prefix/node_modules/.bin/which" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/global-prefix/node_modules/.bin/which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/global-prefix/node_modules/.bin/which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/global-prefix/node_modules/.bin/which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/global-prefix/node_modules/which/bin/which" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/global-prefix/node_modules/which/bin/which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/he/bin/he" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/he/bin/he" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/hpack.js/bin/benchmark" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/hpack.js/bin/benchmark" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/html-minifier-terser/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/html-minifier-terser/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/import-local/fixtures/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/import-local/fixtures/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/is-docker/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/is-docker/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/is-inside-container/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/is-inside-container/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/is-inside-container/node_modules/.bin/is-docker" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/is-inside-container/node_modules/.bin/is-docker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/is-inside-container/node_modules/.bin/is-docker.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/is-inside-container/node_modules/.bin/is-docker.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/is-inside-container/node_modules/is-docker/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/is-inside-container/node_modules/is-docker/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/is-potential-custom-element-name/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/is-potential-custom-element-name/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/istanbul-lib-instrument/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/istanbul-lib-instrument/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/istanbul-lib-instrument/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/istanbul-lib-instrument/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/istanbul-lib-instrument/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/istanbul-lib-instrument/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jake/bin/bash_completion.sh" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jake/bin/bash_completion.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jake/bin/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jake/bin/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jest-cli/bin/jest.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jest-cli/bin/jest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jest-watch-typeahead/node_modules/pretty-format/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jest-watch-typeahead/node_modules/pretty-format/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jest/bin/jest.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jest/bin/jest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jiti/bin/jiti.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jiti/bin/jiti.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/js-yaml/bin/js-yaml.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/js-yaml/bin/js-yaml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsesc/bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jsesc/bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/json5/lib/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/json5/lib/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jsonpath/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/lib/grammar.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jsonpath/lib/grammar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/lib/handlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jsonpath/lib/handlers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jsonpath/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/.bin/esparse" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/.bin/esparse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/.bin/esparse.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/.bin/esparse.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/.bin/esvalidate" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/.bin/esvalidate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/.bin/esvalidate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/.bin/esvalidate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/esprima/bin/esparse.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/esprima/bin/esparse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/esprima/bin/esvalidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/jsonpath/node_modules/esprima/bin/esvalidate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/loose-envify/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/loose-envify/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/lz-string/bin/bin.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/lz-string/bin/bin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/micromatch/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/micromatch/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/mime/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/mime/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/mime/src/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/mime/src/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/mkdirp/bin/cmd.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/mkdirp/bin/cmd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/multicast-dns/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/multicast-dns/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/nanoid/bin/nanoid.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/nanoid/bin/nanoid.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/open/xdg-open" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/open/xdg-open" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/performance-now/test/scripts/delayed-call.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/performance-now/test/scripts/delayed-call.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/performance-now/test/scripts/delayed-require.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/performance-now/test/scripts/delayed-require.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/performance-now/test/scripts/difference.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/performance-now/test/scripts/difference.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/performance-now/test/scripts/initial-value.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/performance-now/test/scripts/initial-value.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-calc/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-calc/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-calc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-calc/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-font-variant/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-font-variant/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-font-variant/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-font-variant/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-font-variant/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-font-variant/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-font-variant/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-font-variant/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-import/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-import/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-import/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-import/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-load-config/node_modules/.bin/yaml" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-load-config/node_modules/.bin/yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-load-config/node_modules/.bin/yaml.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-load-config/node_modules/.bin/yaml.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-load-config/node_modules/yaml/bin.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-load-config/node_modules/yaml/bin.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-svgo/node_modules/.bin/svgo" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-svgo/node_modules/.bin/svgo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-svgo/node_modules/.bin/svgo.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-svgo/node_modules/.bin/svgo.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-svgo/node_modules/css-tree/data/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-svgo/node_modules/css-tree/data/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss-svgo/node_modules/svgo/bin/svgo" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss-svgo/node_modules/svgo/bin/svgo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/postcss/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/postcss/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/pretty-format/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/pretty-format/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/prompts/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/prompts/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/queue-microtask/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/queue-microtask/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/react-scripts/bin/react-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/react-scripts/bin/react-scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/.bin/webpack-dev-server" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/.bin/webpack-dev-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/.bin/webpack-dev-server.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/.bin/webpack-dev-server.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/make-dir/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/make-dir/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/make-dir/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/make-dir/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/make-dir/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/make-dir/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/webpack-dev-server/bin/webpack-dev-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/react-scripts/node_modules/webpack-dev-server/bin/webpack-dev-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/regenerate-unicode-properties/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/regenerate-unicode-properties/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/regjsparser/bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/regjsparser/bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/resolve/bin/resolve" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/resolve/bin/resolve" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/rimraf/bin.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/rimraf/bin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/rollup/dist/bin/rollup" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/rollup/dist/bin/rollup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/sass/sass.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/sass/sass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/sisteransi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/sisteransi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/sisteransi/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/sisteransi/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/.bin/escodegen" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/.bin/escodegen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/.bin/escodegen.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/.bin/escodegen.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/.bin/esgenerate" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/.bin/esgenerate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/.bin/esgenerate.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/.bin/esgenerate.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/escodegen/bin/escodegen.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/escodegen/bin/escodegen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/escodegen/bin/esgenerate.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/node_modules/static-eval/node_modules/escodegen/bin/esgenerate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/public/half_moon_weather_icon_151774.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/BookCreatureForm/BookCreatureForm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/BookCreatureForm/BookCreatureForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/BookCreatureList/BookCreatureList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/BookCreatureList/BookCreatureList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/CreatureListElement/CreatureListElement.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/CreatureListElement/CreatureListElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/EditForm/EditForm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/EditForm/EditForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/FiltersBlock/FiltersBlock.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/FiltersBlock/FiltersBlock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/ImportCSV/ImportCSV.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/ImportCSV/ImportCSV.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/LoginForm/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/components/LoginForm/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/RegistrationForm/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/components/RegistrationForm/RegisterForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/RegistrationForm/RegistrationForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/components/RegistrationForm/RegistrationForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/SimpleRow/SimpleRow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/SimpleRow/SimpleRow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/SpecialActions/SpecialActions.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/SpecialActions/SpecialActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/UserApprovalList/UserApprovalList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/components/UserApprovalList/UserApprovalList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/services/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +476,12 @@
       </list>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:marakkk/is_sem_work.git&quot;,
-    &quot;accountId&quot;: &quot;98c69f5d-169b-44b4-ac83-874c10ae3190&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/marakkk/is_sem_work.git",
+    "accountId": "98c69f5d-169b-44b4-ac83-874c10ae3190"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -60,7 +497,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/marakkk/is_sem_work/is_sem_work_front",
     "list.type.of.created.stylesheet": "SCSS",
@@ -82,6 +519,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/is_front/src" />
       <recent name="C:\Users\Moderator\IS\is_lab_1_front\is_lab_1\src\components" />
       <recent name="$PROJECT_DIR$/is_lab_1/src/components" />
     </key>
@@ -196,6 +634,7 @@
       <workItem from="1734366921821" duration="2295000" />
       <workItem from="1734371891515" duration="1047000" />
       <workItem from="1734419708189" duration="8439000" />
+      <workItem from="1734441580549" duration="3619000" />
     </task>
     <servers />
   </component>

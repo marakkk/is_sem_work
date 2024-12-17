@@ -68,12 +68,39 @@ button:active {
   box-shadow: 0 4px 6px rgba(71, 79, 145, 0.3);
 }
 
+/* Ошибка при вводе */
 .error-message {
-  color: #e74c3c; /* Красный цвет ошибки */
+  color: #e74c3c; /* Красный цвет текста */
   font-size: 14px;
   margin-top: 10px;
   text-align: center;
+  background-color: rgba(231, 76, 60, 0.1); /* Легкий красный фон */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e74c3c; /* Рамка красного цвета */
 }
+
+.error-summary {
+  color: #e74c3c; /* Красный цвет текста для суммарных ошибок */
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: rgba(231, 76, 60, 0.1); /* Легкий красный фон */
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #e74c3c; /* Рамка красного цвета */
+}
+
+/* Для ошибок в форме с фоном */
+.error-message {
+  background-color: #f8d7da; /* Светлый красный фон */
+  color: #721c24; /* Темный цвет текста */
+  border: 1px solid #f5c6cb; /* Светло-красная граница */
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
 
 .account-message {
   text-align: center;
