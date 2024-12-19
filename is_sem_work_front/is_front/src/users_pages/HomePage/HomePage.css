@@ -1,0 +1,146 @@
+/* Основной контейнер */
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Левая колонка */
+.left-column {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.header-user p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.reservations-block {
+    margin-top: 20px;
+}
+
+.reservations-block h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.reservations-list {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.reservation-item {
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.action-button {
+    background-color: #5a60a3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #4a53a1;
+}
+
+/* Правая колонка */
+.right-column {
+    width: 65%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-column h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.right-column p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Стили для кнопки выхода */
+.logout-button {
+    align-self: flex-end;
+    background: rgba(29, 36, 74, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background: #5a60a3;
+}
+
+/* Стили для модального окна */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content button {
+    background-color: #5a60a3;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #4e5393;
+}

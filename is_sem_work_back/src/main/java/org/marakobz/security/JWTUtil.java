@@ -3,53 +3,53 @@ package org.marakobz.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import org.marakobz.model.DreamUser;
-import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Date;
+import java.util.function.Function;
 
 @Component
 public class JWTUtil {
     private static final long EXPIRATION_TIME = 86400000;
-    private static final String SECRET_KEY = "pipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupu";
+    private static final String SECRET_KEY = "pipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupu";
 
-    public static String generateToken(DreamUser user) {
+    public static String generateToken(UserDetails userDetails) {
         return Jwts.builder()
-                .setSubject(user.getUsername())
+                .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(SignatureAlgorithm.HS512, SECRET_KEY.getBytes())
+                .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .compact();
     }
 
     public static String extractUsername(String token) {
-        return getClaims(token).getSubject();
+        return extractClaim(token, Claims::getSubject);
     }
 
-    public static String extractUsernameFromRequest(HttpServletRequest request) {
-        String authHeader = request.getHeader("Authorization");
-        if (authHeader != null && authHeader.startsWith("Bearer")) {
-            String token = authHeader.substring(7);
-            return extractUsername(token);
-        }
-        return null;
-    }
-
-    public static boolean isTokenValid(String token, DreamUser user) {
+    public boolean isTokenValid(String token, UserDetails userDetails) {
         String username = extractUsername(token);
-        return (username.equals(user.getUsername()) && !isTokenExpired(token));
+        return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-    private static boolean isTokenExpired(String token) {
-        Date expiration = getClaims(token).getExpiration();
-        return expiration.before(new Date());
+    public UsernamePasswordAuthenticationToken getAuthenticationToken(UserDetails userDetails) {
+        return new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+    }
+
+    private boolean isTokenExpired(String token) {
+        return extractClaim(token, Claims::getExpiration).before(new Date());
+    }
+
+    private static <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
+        final Claims claims = getClaims(token);
+        return claimsResolver.apply(claims);
     }
 
     private static Claims getClaims(String token) {
         return Jwts.parser()
-                .setSigningKey(SECRET_KEY.getBytes())
+                .setSigningKey(SECRET_KEY)
                 .build()
                 .parseClaimsJws(token)
                 .getBody();

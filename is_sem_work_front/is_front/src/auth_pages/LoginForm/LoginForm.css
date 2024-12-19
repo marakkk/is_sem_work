@@ -27,18 +27,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3b4d80; /* Тёмно-синий цвет */
+  font-size: 50px;
+  margin-top: 100px;
   width: 100%;
   padding: 25px 0;
   margin-bottom: 30px;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .welcome-header h2 {
   margin: 0;
-  color: #f0f4ff; /* Светлый цвет текста */
-  font-size: 36px;
+  color: #f0f4ff;
   letter-spacing: 1px;
 }
 
@@ -73,7 +71,7 @@ input:focus {
 button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(to right, #5a60a3, #474f91); /* Градиент для кнопки */
+  background: rgba(29, 36, 74, 0.5);
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -85,7 +83,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #474f91, #2b3a67); /* Тёмный градиент при наведении */
+  background: rgba(48, 55, 101, 0.69);
   box-shadow: 0 6px 12px rgba(71, 79, 145, 0.5);
   transform: translateY(-2px); /* Плавный эффект подъема */
 }

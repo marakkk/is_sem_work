@@ -5,16 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea8457c-d9c2-4d23-b187-092704c13151" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/HomePage/HomePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/HomePage/HomePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/DreamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/DreamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/dto/CharactersDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/dto/CharactersDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/dto/DreamDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/dto/DreamDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/model/Dream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/model/Dream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/model/DreamUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/model/DreamUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/repository/CalendarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/repository/CalendarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/repository/CharactersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/repository/CharactersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/repository/DreamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/repository/DreamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/repository/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/security/ApplicationSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/security/ApplicationSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/security/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/security/JWTUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/security/JWTUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/security/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/security/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/service/DreamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/service/DreamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/controller/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/controller/DreamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/controller/DreamController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/controller/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/controller/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/model/DreamUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/model/DreamUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/repository/CalendarRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/repository/CalendarRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/repository/ReservationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/repository/ReservationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/security/ApplicationSecurity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/security/ApplicationSecurity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/security/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/security/JWTAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/security/JWTUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/security/JWTUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/security/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/security/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/service/DreamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/service/DreamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/service/ReservationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/service/ReservationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../is_sem_work_front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/public/half_moon_weather_icon_151774.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/public/images/half_moon_weather_icon_151774.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/LoginForm/LoginForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/LoginForm/LoginForm.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/LoginForm/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/LoginForm/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/LoginForm/fonwall.ru-galaxy-sky-atmosphere-purple.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/LoginForm/fonwall.ru-galaxy-sky-atmosphere-purple.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/RegistrationForm/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/RegistrationForm/RegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/RegistrationForm/RegistrationForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/RegistrationForm/RegistrationForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/LoginForm/LoginForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/LoginForm/LoginForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/LoginForm/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/LoginForm/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/RegistrationForm/RegistrationForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/RegistrationForm/RegistrationForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/Button/Button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/Button/Button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/Container/Container.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/Container/Container.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/Content/Content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/components/Content/Content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/AdminPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/AdminPage/AdminPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/ArchitectPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/ArchitectPage/ArchitectPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/HomePage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/styles/AdminPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/AdminPage/AdminPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/styles/ArchitectPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/ArchitectPage/ArchitectPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/styles/HomePage.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +70,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -39,12 +85,12 @@
     &quot;assignee&quot;: &quot;marakkk&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/marakkk/is_sem_work.git",
-    "accountId": "98c69f5d-169b-44b4-ac83-874c10ae3190"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/marakkk/is_sem_work.git&quot;,
+    &quot;accountId&quot;: &quot;98c69f5d-169b-44b4-ac83-874c10ae3190&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -59,43 +105,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Maven.is-lab1 [install].executor": "Run",
-    "Maven.is_sem_work [clean].executor": "Run",
-    "Maven.is_sem_work [compile].executor": "Run",
-    "Maven.is_sem_work [install].executor": "Run",
-    "Maven.is_sem_work [package].executor": "Run",
-    "Maven.is_sem_work [validate].executor": "Run",
-    "Maven.is_sem_work [verify].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Main.executor": "Run",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/marakkk/is_sem_work/is_sem_work_back",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.is-lab1 [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.is_sem_work [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.is_sem_work [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.is_sem_work [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.is_sem_work [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.is_sem_work [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.is_sem_work [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marakkk/is_sem_work/is_sem_work_back&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="org.marakobz.security" />
@@ -202,6 +248,9 @@
       <workItem from="1734371814193" duration="4179000" />
       <workItem from="1734419702317" duration="9913000" />
       <workItem from="1734441582996" duration="4802000" />
+      <workItem from="1734561022919" duration="1537000" />
+      <workItem from="1734606096169" duration="95000" />
+      <workItem from="1734633114439" duration="9308000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,102 @@
+.create-dream-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-dream-page h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.create-dream-page form {
+    display: grid;
+    gap: 20px;
+}
+
+.create-dream-page input[type="text"],
+.create-dream-page select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.create-dream-page input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.create-dream-page select {
+    font-size: 1rem;
+}
+
+.create-dream-page .characters div {
+    margin-bottom: 15px;
+}
+
+.create-dream-page .characters label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.create-dream-page .characters input[type="text"] {
+    margin-bottom: 10px;
+}
+
+.create-dream-page .characters div div {
+    margin-left: 20px;
+}
+
+.create-dream-page .characters input[type="text"]:focus {
+    border-color: #5a60a3;
+    outline: none;
+}
+
+.create-dream-page button {
+    background-color: #5a60a3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.create-dream-page button:hover {
+    background-color: #5a60a3;
+}
+
+.create-dream-page .error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .create-dream-page {
+        padding: 15px;
+    }
+
+    .create-dream-page h1 {
+        font-size: 1.5rem;
+    }
+
+    .create-dream-page form {
+        gap: 15px;
+    }
+
+    .create-dream-page input[type="text"],
+    .create-dream-page select,
+    .create-dream-page button {
+        font-size: 0.9rem;
+    }
+}

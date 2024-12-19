@@ -5,13 +5,17 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.marakobz.enums.Roles;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
 @Data
 @Entity
 @Table(name = "dream_user")
-public class DreamUser {
+public class DreamUser implements UserDetails {
 
     @Getter
     @Id
@@ -50,4 +54,8 @@ public class DreamUser {
     )
     private Set<Dream> dreams;
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
+    }
 }

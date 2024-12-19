@@ -27,11 +27,11 @@ function LoginForm({ onLogin }) {
             onLogin(token);
 
             if (role === 'ADMIN') {
-                navigate('/admin-page');
+                navigate('/dreams/admin-page');
             } else if (role === 'CUSTOMER') {
-                navigate('/home-page');
+                navigate('/dreams/home-page');
             } else if (role === 'ARCHITECT'){
-                navigate('/architect-page');
+                navigate('/dreams/architect-page');
             }
         } else {
             setErrorMessage('Не удалось войти. Проверьте логин и пароль.');
