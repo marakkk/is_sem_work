@@ -10,7 +10,6 @@ import java.util.List;
 @Setter
 @Data
 public class DreamDto {
-    private Long dreamId;
     private String name;
     private String timeEra;
     private String virtualEnvironment;
@@ -27,6 +26,5 @@ public class DreamDto {
     private Integer price;
     private Long architectId;
     private Long creatorId;
-    private List<Long> characterIds;
-
+    private List<CharactersDto> characters;
 }

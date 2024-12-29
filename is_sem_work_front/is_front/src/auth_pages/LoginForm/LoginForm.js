@@ -20,7 +20,7 @@ function LoginForm({ onLogin }) {
             const data = await response.json();
             const { token, role } = data;
 
-            localStorage.setItem('jwtToken', token);
+            localStorage.setItem('token', token);
             localStorage.setItem('username', username);
             localStorage.setItem('role', role);
 

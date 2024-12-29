@@ -9,6 +9,14 @@ function HomePage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate();
 
+    const token = localStorage.getItem('token');
+
+    useEffect(() => {
+        if (!token) {
+            navigate('/login');
+        }
+    }, [token, navigate]);
+
     const handleLogout = () => {
         localStorage.clear();
         navigate('/login');
@@ -24,7 +32,7 @@ function HomePage() {
 
     const handleCreateOwnDream = () => {
         setIsModalOpen(false);
-        navigate('/create-own-dream');
+        navigate('/dreams/create-own-dream');
     };
 
     const handleSelectTemplate = () => {
@@ -33,7 +41,7 @@ function HomePage() {
     };
 
     useEffect(() => {
-        const token = localStorage.getItem('jwtToken');
+        const token = localStorage.getItem('token');
 
         if (token) {
             const payload = token.split('.')[1];

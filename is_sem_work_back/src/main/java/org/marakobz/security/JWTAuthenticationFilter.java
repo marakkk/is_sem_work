@@ -5,6 +5,9 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.marakobz.service.DreamService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
@@ -17,6 +20,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JWTAuthenticationFilter extends OncePerRequestFilter {
 
+    private static final Logger logger = LoggerFactory.getLogger(JWTAuthenticationFilter.class);
     private final JWTUtil jwtUtil;
     private final UserDetailsService userDetailsService;
 

@@ -26,7 +26,7 @@ function App() {
                     <Route path="/register" element={<RegisterForm />} />
                     <Route path="/" element={<Navigate to="/login" />} />
                     <Route path="/dreams/home-page" element={<HomePage />} />
-                    <Route path="/create-own-dream" element={<CreateDreamPage />} />
+                    <Route path="/dreams/create-own-dream" element={<CreateDreamPage />} />
                 </Routes>
             </div>
         </Router>
