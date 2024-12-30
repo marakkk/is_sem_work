@@ -49,12 +49,8 @@ public class AuthService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return (UserDetails) userRepository.findByUsername(username);
-    }
-
-    public DreamUser getUserFromToken(String token) {
-        String username = JWTUtil.extractUsername(token);
         return userRepository.findByUsername(username);
     }
+
 
 }

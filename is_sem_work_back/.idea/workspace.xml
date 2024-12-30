@@ -5,24 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ea8457c-d9c2-4d23-b187-092704c13151" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/DreamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/controller/DreamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/dto/CharactersDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/dto/CharactersDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/dto/DreamDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/dto/DreamDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/model/Dream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/model/Dream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/security/JWTAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/service/DreamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/service/DreamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/controller/DreamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/controller/DreamController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/dto/CharactersDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/dto/CharactersDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/dto/DreamDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/dto/DreamDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/security/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/security/JWTAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/service/DreamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/service/DreamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/marakobz/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/marakobz/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/security/JWTUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/security/JWTUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/marakobz/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/marakobz/service/AuthService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../is_sem_work_front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/LoginForm/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/auth_pages/LoginForm/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/CreationDreamPage/CustomDreamPage.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_front/is_front/src/users_pages/HomePage/HomePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,43 +58,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker-compose.yml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.is-lab1 [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.is_sem_work [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.is_sem_work [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.is_sem_work [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.is_sem_work [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.is_sem_work [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.is_sem_work [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/marakkk/is_sem_work/is_sem_work_back&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Maven.is-lab1 [install].executor": "Run",
+    "Maven.is_sem_work [clean].executor": "Run",
+    "Maven.is_sem_work [compile].executor": "Run",
+    "Maven.is_sem_work [install].executor": "Run",
+    "Maven.is_sem_work [package].executor": "Run",
+    "Maven.is_sem_work [validate].executor": "Run",
+    "Maven.is_sem_work [verify].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Main.executor": "Run",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/marakkk/is_sem_work/is_sem_work_back",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="org.marakobz.security" />
@@ -216,6 +206,7 @@
       <workItem from="1734633114439" duration="9308000" />
       <workItem from="1734703580659" duration="2440000" />
       <workItem from="1735463319765" duration="11018000" />
+      <workItem from="1735556939729" duration="10567000" />
     </task>
     <servers />
   </component>

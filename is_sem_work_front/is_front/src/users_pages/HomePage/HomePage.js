@@ -46,9 +46,9 @@ function HomePage() {
         if (token) {
             const payload = token.split('.')[1];
             const decodedPayload = JSON.parse(atob(payload));
-
-            setUserName(decodedPayload.sub);
+            console.log(decodedPayload);
         }
+
 
         const fetchReservations = async () => {
             const response = await fetch('http://localhost:8080/api/dreams/home-page/reservations', {

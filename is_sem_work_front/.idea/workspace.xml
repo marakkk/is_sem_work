@@ -5,24 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3bf68b-1b7c-49c8-8c9e-03a264329802" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../is_sem_work_back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/controller/DreamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/controller/DreamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/dto/CharactersDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/dto/CharactersDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/dto/DreamDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/dto/DreamDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/model/Dream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/model/Dream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/security/JWTAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/DreamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/DreamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/controller/DreamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/controller/DreamController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/dto/CharactersDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/dto/CharactersDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/dto/DreamDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/dto/DreamDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/security/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/security/JWTAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/service/DreamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/service/DreamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/security/JWTUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/security/JWTUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/service/AuthService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/is_front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/is_front/src/auth_pages/LoginForm/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/auth_pages/LoginForm/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CustomDreamPage.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/users_pages/HomePage/HomePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,30 +63,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/marakkk/is_sem_work/is_sem_work_front&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.install.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/marakkk/idea/ideaIU-2024.2.2/idea-IU-242.22855.74/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/marakkk/is_sem_work/is_sem_work_front",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.install.executor": "Run",
+    "npm.start.executor": "Run",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/home/marakkk/idea/ideaIU-2024.2.2/idea-IU-242.22855.74/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/is_front/src/users_pages/ArchitectPage" />
@@ -222,6 +212,7 @@
       <workItem from="1734633111423" duration="8477000" />
       <workItem from="1734703574508" duration="4887000" />
       <workItem from="1735463317460" duration="11053000" />
+      <workItem from="1735556933100" duration="9760000" />
     </task>
     <servers />
   </component>

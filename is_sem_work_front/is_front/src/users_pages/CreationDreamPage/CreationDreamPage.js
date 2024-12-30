@@ -23,9 +23,9 @@ function CreateDreamPage() {
     });
 
     const [errorMessage, setErrorMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [formErrors, setFormErrors] = useState({});
-    const [successMessage, setSuccessMessage] = useState('');
     const navigate = useNavigate();
 
 
@@ -88,10 +88,11 @@ function CreateDreamPage() {
 
         if (!role) errors.role = 'Пожалуйста, выберите роль.';
         if (!genre) errors.genre = 'Пожалуйста, выберите жанр.';
-        if (price <= 0) errors.price = 'Цена не может быть меньше или равна нулю.';
         if (selectedCharacters.length === 0) errors.characters = 'Добавьте хотя бы одного персонажа.';
 
         setFormErrors(errors);
+        console.log("Ошибки валидации:", errors);
+
         return Object.keys(errors).length === 0;
     };
 
@@ -133,24 +134,38 @@ function CreateDreamPage() {
             });
 
             if (response.ok) {
-                const responseData = await response.json();
-                const newDreamId = responseData.id;
-
-                setSuccessMessage('Сон успешно создан с ID: ${newDreamId}');
                 setErrorMessage('');
-                setFormErrors({});
+                setSuccessMessage('Сон успешно создан!');
+
+                setName('');
+                setTimeEra('');
+                setVirtualEnvironment('');
+                setSpecialPowers('');
+                setPhysicalRules('');
+                setRole('');
+                setGenre('');
+                setScenario('');
+                setTemplate(false);
+                setPrice(0);
+                setSelectedCharacters([]);
+                setNewCharacter({
+                    name: '',
+                    characteristics: '',
+                    appearance: '',
+                    relation: '',
+                    occupation: '',
+                });
             } else {
                 const errorText = await response.json();
                 setErrorMessage(errorText.message || 'Ошибка при создании сна.');
             }
-
         } catch (error) {
             setErrorMessage('Произошла ошибка при отправке данных на сервер.');
         }
     };
 
     const handleBack = () => {
-        navigate(-1); // Возвращаем пользователя на предыдущую страницу
+        navigate(-1);
     };
     return (
         <div className="create-dream-page">
@@ -351,17 +366,17 @@ function CreateDreamPage() {
                             {errorMessage}
                         </div>
                     )}
-                    {successMessage && (
-                        <div className="success-message">
-                            {successMessage}
-                            <button onClick={() => setSuccessMessage('')}>Закрыть</button>
-                        </div>
-                    )}
 
 
                     <div>
                         <button type="submit">Создать сон</button>
+                        {successMessage && (
+                            <div className="success-message">
+                                {successMessage}
+                            </div>
+                        )}
                     </div>
+
                     <div>
                         <button
                             type="button"
