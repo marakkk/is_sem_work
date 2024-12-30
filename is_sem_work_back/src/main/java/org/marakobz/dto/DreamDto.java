@@ -25,6 +25,5 @@ public class DreamDto {
     private String genre;
     private Integer price;
     private Long architectId;
-    private Long creatorId;
     private List<CharactersDto> characters;
 }

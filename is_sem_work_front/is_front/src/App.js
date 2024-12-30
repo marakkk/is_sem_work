@@ -4,6 +4,11 @@ import LoginForm from './auth_pages/LoginForm/LoginForm';
 import RegisterForm from './auth_pages/RegistrationForm/RegisterForm';
 import HomePage from './users_pages/HomePage/HomePage'
 import CreateDreamPage from "./users_pages/CreationDreamPage/CreationDreamPage";
+import SelectTemplatePage from "./users_pages/SelectTemplatePage/SelectTemplatePage";
+import ArchitectPage from "./users_pages/ArchitectPage/ArchitectPage";
+import CreationTemplatesPage from "./users_pages/CreationTemplatesPage/CreationTemplatesPage";
+import SelectArchitectPage from "./users_pages/SelectArchitectPage/SelectArchitectPage";
+
 
 
 function App() {
@@ -27,6 +32,11 @@ function App() {
                     <Route path="/" element={<Navigate to="/login" />} />
                     <Route path="/dreams/home-page" element={<HomePage />} />
                     <Route path="/dreams/create-own-dream" element={<CreateDreamPage />} />
+                    <Route path="/dreams/templates" element={<SelectTemplatePage />} />
+                    <Route path="/dreams/architect-page" element={<ArchitectPage/>} />
+                    <Route path="/dreams/architect-page/create-template" element={<CreationTemplatesPage/>} />
+                    <Route path="/dreams/select-architect/:dreamId" element={<SelectArchitectPage />} />
+
                 </Routes>
             </div>
         </Router>

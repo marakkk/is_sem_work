@@ -2,7 +2,7 @@ form {
   max-width: 500px;
   margin: 0 auto;
   padding: 40px;
-  background: linear-gradient(to bottom, #2b3a67, #5a60a3); /* Новый градиент */
+  background: linear-gradient(to bottom, #2b3a67, #5a60a3);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Глубокая тень */
   font-family: 'Arial', sans-serif;
@@ -68,7 +68,6 @@ button:active {
   box-shadow: 0 4px 6px rgba(71, 79, 145, 0.3);
 }
 
-/* Ошибка при вводе */
 .error-message {
   color: #e74c3c; /* Красный цвет текста */
   font-size: 14px;
@@ -91,7 +90,6 @@ button:active {
   border: 1px solid #e74c3c; /* Рамка красного цвета */
 }
 
-/* Для ошибок в форме с фоном */
 .error-message {
   background-color: #f8d7da; /* Светлый красный фон */
   color: #721c24; /* Темный цвет текста */
@@ -100,7 +98,6 @@ button:active {
   border-radius: 5px;
   margin-top: 10px;
 }
-
 
 .account-message {
   text-align: center;
@@ -116,7 +113,7 @@ button:active {
 }
 
 .account-message a:hover {
-  color: #d6d8ff; /* Светлее при наведении */
+  color: #d6d8ff;
 }
 
 .page-container {
@@ -125,7 +122,7 @@ button:active {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(to bottom, #2b3a67, #5a60a3); /* Общий фон страницы */
+  background: linear-gradient(to bottom, #2b3a67, #5a60a3);
 }
 
 .page-title {
@@ -141,7 +138,6 @@ button:active {
 }
 
 
-/* Общий контейнер */
 .main-container {
   display: flex;
   flex-direction: column;
@@ -155,7 +151,6 @@ button:active {
   position: relative;
 }
 
-/* Заголовок сервиса */
 .welcome-header {
   display: flex;
   justify-content: center;

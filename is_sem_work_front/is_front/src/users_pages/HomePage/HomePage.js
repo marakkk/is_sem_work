@@ -37,8 +37,9 @@ function HomePage() {
 
     const handleSelectTemplate = () => {
         setIsModalOpen(false);
-        navigate('/select-template');
+        navigate('/dreams/templates');
     };
+
 
     useEffect(() => {
         const token = localStorage.getItem('token');

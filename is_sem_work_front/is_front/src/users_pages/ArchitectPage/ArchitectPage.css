@@ -1,0 +1,41 @@
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+
+.left-column,
+.right-column {
+    width: 48%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-button {
+    background-color: #5a60a3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #4a53a1;
+}
+
+.price-management input {
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+}

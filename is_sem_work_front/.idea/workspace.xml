@@ -6,13 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="8f3bf68b-1b7c-49c8-8c9e-03a264329802" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../is_sem_work_back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/controller/DreamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/controller/DreamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/dto/DreamDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/dto/DreamDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/model/Architect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/model/Architect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/model/Dream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/model/Dream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/repository/ArchitectureRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/repository/ArchitectureRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/repository/DreamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/repository/DreamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/security/JWTAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/DreamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/src/main/java/org/marakobz/service/DreamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/controller/DreamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/controller/DreamController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/dto/DreamDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/dto/DreamDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/model/Dream.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/model/Dream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/repository/ArchitectureRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/repository/ArchitectureRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/repository/DreamRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/repository/DreamRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/security/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/security/JWTAuthenticationFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/security/JWTUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/security/JWTUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/service/DreamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../is_sem_work_back/target/classes/org/marakobz/service/DreamService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/auth_pages/RegistrationForm/RegistrationForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/auth_pages/RegistrationForm/RegistrationForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/services/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/ArchitectPage/ArchitectPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/users_pages/ArchitectPage/ArchitectPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/ArchitectPage/ArchitectPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/users_pages/ArchitectPage/ArchitectPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/users_pages/CreationDreamPage/CreationDreamPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/HomePage/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/users_pages/HomePage/HomePage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/is_front/src/users_pages/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/is_front/src/users_pages/HomePage/HomePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +231,7 @@
       <workItem from="1734633111423" duration="8477000" />
       <workItem from="1734703574508" duration="4887000" />
       <workItem from="1735463317460" duration="11053000" />
-      <workItem from="1735556933100" duration="9760000" />
+      <workItem from="1735556933100" duration="20760000" />
     </task>
     <servers />
   </component>

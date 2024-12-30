@@ -71,7 +71,6 @@
     background-color: #4a53a1;
 }
 
-/* Правая колонка */
 .right-column {
     width: 65%;
     background-color: #fff;
@@ -90,7 +89,6 @@
     color: #666;
 }
 
-/* Стили для кнопки выхода */
 .logout-button {
     align-self: flex-end;
     background: rgba(29, 36, 74, 0.5);

@@ -24,5 +24,4 @@ public class Architect {
 
     private long dreamId;
 
-
 }

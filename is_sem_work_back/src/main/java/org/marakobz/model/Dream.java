@@ -1,6 +1,8 @@
 package org.marakobz.model;
 
 import jakarta.persistence.*;
+
+import java.util.HashSet;
 import java.util.Set;
 import lombok.Data;
 import org.marakobz.enums.*;
@@ -65,4 +67,12 @@ public class Dream {
     @ManyToOne
     @JoinColumn(name = "creator_id")
     private DreamUser creator;
+
+    @ManyToMany
+    @JoinTable(
+            name = "dream_architects",
+            joinColumns = @JoinColumn(name = "dream_id"),
+            inverseJoinColumns = @JoinColumn(name = "architect_id")
+    )
+    private Set<Architect> architects = new HashSet<>();
 }

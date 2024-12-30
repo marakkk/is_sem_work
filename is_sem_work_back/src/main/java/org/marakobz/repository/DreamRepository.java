@@ -10,9 +10,7 @@ import java.util.Optional;
 public interface DreamRepository extends JpaRepository<Dream, Long> {
 
     Optional<Dream> findById(Long id);
+    List<Dream> findByTemplateTrue();
 
-    Optional<Dream> findByName(String name);
-
-    List<Dream> findByCreatorId(Long creatorId);
 }
 

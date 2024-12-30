@@ -20,7 +20,6 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JWTAuthenticationFilter extends OncePerRequestFilter {
 
-    private static final Logger logger = LoggerFactory.getLogger(JWTAuthenticationFilter.class);
     private final JWTUtil jwtUtil;
     private final UserDetailsService userDetailsService;
 

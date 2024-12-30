@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CreationDreamPage.css';
+import './CreationTemplatesPage.css';
 
-function CreateDreamPage() {
-    const [name, setName] = useState('');
-    const [timeEra, setTimeEra] = useState('');
-    const [virtualEnvironment, setVirtualEnvironment] = useState('');
-    const [specialPowers, setSpecialPowers] = useState('');
-    const [physicalRules, setPhysicalRules] = useState('');
-    const [role, setRole] = useState('');
-    const [genre, setGenre] = useState('');
-    const [scenario, setScenario] = useState('');
-    const [template, setTemplate] = useState(false);
-    const [price, setPrice] = useState(0);
-    const [selectedCharacters, setSelectedCharacters] = useState([]);
+function CreationTemplatesPage() {
+    const [formData, setFormData] = useState({
+        name: '',
+        timeEra: '',
+        virtualEnvironment: '',
+        specialPowers: '',
+        physicalRules: '',
+        role: '',
+        genre: '',
+        scenario: '',
+        price: 0,
+        selectedCharacters: [],
+    });
+
     const [newCharacter, setNewCharacter] = useState({
         name: '',
         characteristics: '',
@@ -28,15 +30,26 @@ function CreateDreamPage() {
     const [formErrors, setFormErrors] = useState({});
     const navigate = useNavigate();
 
-
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (!token) {
             setErrorMessage('Вы не авторизованы. Пожалуйста, войдите в систему.');
-        } else {
+            return;
+        }
+
+        try {
             setIsLoggedIn(true);
+        } catch (error) {
+            setErrorMessage('Ошибка при обработке токена.');
         }
     }, []);
+
+    const handleChange = (field, value) => {
+        setFormData(prev => ({
+            ...prev,
+            [field]: value,
+        }));
+    };
 
     const handleNewCharacterChange = (field, value) => {
         setNewCharacter(prev => ({
@@ -46,17 +59,16 @@ function CreateDreamPage() {
     };
 
     const handleAddCharacter = () => {
-        if (!newCharacter.name || !newCharacter.characteristics || !newCharacter.appearance || !newCharacter.relation || !newCharacter.occupation) {
-            setErrorMessage('Пожалуйста, заполните все поля персонажа.');
+        const { name, characteristics, appearance, relation, occupation } = newCharacter;
+        if (!name || !characteristics || !appearance || !relation || !occupation) {
+            setErrorMessage('Заполните все поля персонажа.');
             return;
         }
 
-        setSelectedCharacters(prev => [
+        setFormData(prev => ({
             ...prev,
-            {
-                ...newCharacter,
-            },
-        ]);
+            selectedCharacters: [...prev.selectedCharacters, { ...newCharacter }],
+        }));
 
         setNewCharacter({
             name: '',
@@ -69,30 +81,32 @@ function CreateDreamPage() {
         setErrorMessage('');
     };
 
-    const handleDeleteCharacter = (index) => {
-        setSelectedCharacters(prev => prev.filter((_, i) => i !== index));
-    };
-
     const handleEditCharacter = (index) => {
-        const characterToEdit = selectedCharacters[index];
-        setNewCharacter(characterToEdit);
+        const selected = formData.selectedCharacters[index];
+        setNewCharacter(selected);
         handleDeleteCharacter(index);
     };
 
+    const handleDeleteCharacter = (index) => {
+        setFormData(prev => ({
+            ...prev,
+            selectedCharacters: prev.selectedCharacters.filter((_, i) => i !== index),
+        }));
+    };
+
     const validateForm = () => {
-        let errors = {};
+        const errors = {};
+        const { name, timeEra, virtualEnvironment, role, genre, price, selectedCharacters } = formData;
 
-        if (!name) errors.name = 'Пожалуйста, введите название сна.';
-        if (!timeEra) errors.timeEra = 'Пожалуйста, выберите эру времени.';
-        if (!virtualEnvironment) errors.virtualEnvironment = 'Пожалуйста, выберите виртуальную среду.';
-
-        if (!role) errors.role = 'Пожалуйста, выберите роль.';
-        if (!genre) errors.genre = 'Пожалуйста, выберите жанр.';
-        if (selectedCharacters.length === 0) errors.characters = 'Добавьте хотя бы одного персонажа.';
+        if (!name) errors.name = 'Введите название шаблона.';
+        if (!timeEra) errors.timeEra = 'Выберите эру времени.';
+        if (!virtualEnvironment) errors.virtualEnvironment = 'Выберите виртуальную среду.';
+        if (price <= 0) errors.price = 'Цена должна быть больше нуля.';
+        if (!role) errors.role = 'Выберите роль.';
+        if (!genre) errors.genre = 'Выберите жанр.';
+        if (selectedCharacters.length === 0) errors.selectedCharacters = 'Добавьте хотя бы одного персонажа.';
 
         setFormErrors(errors);
-        console.log("Ошибки валидации:", errors);
-
         return Object.keys(errors).length === 0;
     };
 
@@ -101,102 +115,93 @@ function CreateDreamPage() {
 
         if (!validateForm()) return;
 
-        const dreamData = {
-            name,
-            timeEra,
-            virtualEnvironment,
-            specialPowers,
-            physicalRules,
-            role,
-            genre,
-            scenario,
-            template,
-            price,
-            characters: selectedCharacters.map(character => ({
-                name: character.name,
-                characteristics: character.characteristics,
-                appearance: character.appearance,
-                relation: character.relation,
-                occupation: character.occupation,
-            })),
+        const token = localStorage.getItem('token');
+        const { selectedCharacters, ...otherFields } = formData;
+
+        const templateData = {
+            ...otherFields,
+            characters: selectedCharacters,
+            template: true,
         };
 
-        const token = localStorage.getItem('token');
-
         try {
-            const response = await fetch('http://localhost:8080/api/dreams/create-own-dream', {
+            const response = await fetch('http://localhost:8080/api/dreams/architect-page/create-template', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,
                 },
-                body: JSON.stringify(dreamData),
+                body: JSON.stringify(templateData),
             });
 
             if (response.ok) {
-                setErrorMessage('');
-                setSuccessMessage('Сон успешно создан!');
-
-                const newDream = await response.json();
-                const newDreamId = newDream.id;
-
-                setName('');
-                setTimeEra('');
-                setVirtualEnvironment('');
-                setSpecialPowers('');
-                setPhysicalRules('');
-                setRole('');
-                setGenre('');
-                setScenario('');
-                setTemplate(false);
-                setPrice(0);
-                setSelectedCharacters([]);
-                setNewCharacter({
-                    name: '',
-                    characteristics: '',
-                    appearance: '',
-                    relation: '',
-                    occupation: '',
-                });
-
-                navigate(`/dreams/select-architect/${newDreamId}`);
+                setSuccessMessage('Шаблон успешно создан!');
+                resetForm();
             } else {
                 const errorText = await response.json();
-                setErrorMessage(errorText.message || 'Ошибка при создании сна.');
+                setErrorMessage(errorText.message || 'Ошибка при создании шаблона.');
             }
         } catch (error) {
-            setErrorMessage('Произошла ошибка при отправке данных на сервер.');
+            setErrorMessage('Ошибка при отправке данных на сервер.');
         }
     };
 
+    const resetForm = () => {
+        setFormData({
+            name: '',
+            timeEra: '',
+            virtualEnvironment: '',
+            specialPowers: '',
+            physicalRules: '',
+            role: '',
+            genre: '',
+            scenario: '',
+            price: 0,
+            selectedCharacters: [],
+        });
+        setFormErrors({});
+        setSuccessMessage('');
+    };
 
     const handleBack = () => {
         navigate(-1);
     };
+
     return (
-        <div className="create-dream-page">
+        <div className="create-template-page">
             {!isLoggedIn ? (
-                <div className="error-message">
-                    {errorMessage}
-                </div>
+                <div className="error-message">{errorMessage}</div>
             ) : (
                 <form onSubmit={handleSubmit}>
                     <div className="create-form-container">
                         <div>
-                            <label>Название сна</label>
+                            <label>Название шаблона</label>
                             <input
                                 type="text"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                value={formData.name}
+                                onChange={(e) => handleChange('name', e.target.value)}
                             />
                             {formErrors.name && <div className="error-message">{formErrors.name}</div>}
                         </div>
 
+
+                        <div>
+                            <label>Цена</label>
+                            <input
+                                type="number"
+                                value={formData.price}
+                                onChange={(e) => handleChange('price', Number(e.target.value))}
+                                min="0"
+                            />
+                            {formErrors.price && <div className="error-message">{formErrors.price}</div>}
+                        </div>
+
+
                         <div>
                             <label>Эра времени</label>
                             <select
-                                value={timeEra}
-                                onChange={(e) => setTimeEra(e.target.value)}
+                                value={formData.timeEra}
+                                onChange={(e) => handleChange('timeEra', e.target.value)}
                             >
                                 <option value="">Выберите эру времени</option>
                                 <option value="MEDIEVAL">Средневековье</option>
@@ -211,8 +216,8 @@ function CreateDreamPage() {
                         <div>
                             <label>Виртуальная среда</label>
                             <select
-                                value={virtualEnvironment}
-                                onChange={(e) => setVirtualEnvironment(e.target.value)}
+                                value={formData.virtualEnvironment}
+                                onChange={(e) => handleChange('virtualEnvironment', e.target.value)}
                                 required
                             >
                                 <option value="">Выберите виртуальную среду</option>
@@ -229,8 +234,8 @@ function CreateDreamPage() {
                         <div>
                             <label>Особые силы</label>
                             <select
-                                value={specialPowers}
-                                onChange={(e) => setSpecialPowers(e.target.value)}
+                                value={formData.specialPowers}
+                                onChange={(e) => handleChange('specialPowers', e.target.value)}
                                 required
                             >
                                 <option value="">Выберите специальные способности</option>
@@ -244,8 +249,8 @@ function CreateDreamPage() {
                         <div>
                             <label>Физические законы</label>
                             <select
-                                value={physicalRules}
-                                onChange={(e) => setPhysicalRules(e.target.value)}
+                                value={formData.physicalRules}
+                                onChange={(e) => handleChange('physicalRules', e.target.value)}
                                 required
                             >
                                 <option value="">Выберите используемые физические законы</option>
@@ -258,8 +263,8 @@ function CreateDreamPage() {
                         <div>
                             <label>Роль</label>
                             <select
-                                value={role}
-                                onChange={(e) => setRole(e.target.value)}
+                                value={formData.role}
+                                onChange={(e) => handleChange('role', e.target.value)}
                                 required
                             >
                                 <option value="">Выберите роль во сне</option>
@@ -274,8 +279,8 @@ function CreateDreamPage() {
                         <div>
                             <label>Жанр</label>
                             <select
-                                value={genre}
-                                onChange={(e) => setGenre(e.target.value)}
+                                value={formData.genre}
+                                onChange={(e) => handleChange('genre', e.target.value)}
                                 required
                             >
                                 <option value="">Выберите жанр</option>
@@ -292,8 +297,8 @@ function CreateDreamPage() {
                             <label>Сценарий</label>
                             <input
                                 type="text"
-                                value={scenario}
-                                onChange={(e) => setScenario(e.target.value)}
+                                value={formData.scenario}
+                                onChange={(e) => handleChange('scenario', e.target.value)}
                             />
                             {formErrors.scenario && <div className="error-message">{formErrors.scenario}</div>}
 
@@ -354,36 +359,32 @@ function CreateDreamPage() {
                             <button type="button" onClick={handleAddCharacter}>Добавить персонажа</button>
                             {formErrors.characters && <div className="error-message">{formErrors.characters}</div>}
                         </div>
-                    </div>
 
-                    <h3>Добавленные персонажи</h3>
-                    <ul>
-                        {selectedCharacters.map((character, index) => (
-                            <li key={index}>
-                                {character.name}
-                                <button type="button" onClick={() => handleDeleteCharacter(index)}>Удалить</button>
-                                <button type="button" onClick={() => handleEditCharacter(index)}>Редактировать</button>
-                            </li>
-                        ))}
-                    </ul>
 
-                    {errorMessage && (
-                        <div className="error-message">
-                            {errorMessage}
+                        <div>
+                            <h3>Добавленные персонажи</h3>
+                            <ul>
+                                {formData.selectedCharacters.map((character, index) => (
+                                    <li key={index}>
+                                        {character.name}
+                                        <button type="button" onClick={() => handleDeleteCharacter(index)}>Удалить
+                                        </button>
+                                        <button type="button" onClick={() => handleEditCharacter(index)}>Редактировать
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                            {formErrors.selectedCharacters && (
+                                <div className="error-message">{formErrors.selectedCharacters}</div>
+                            )}
                         </div>
-                    )}
 
+                        {errorMessage && <div className="error-message">{errorMessage}</div>}
+                        <div>
+                            <button type="submit">Создать шаблон</button>
+                            {successMessage && <div className="success-message">{successMessage}</div>}
+                        </div>
 
-                    <div>
-                        <button type="submit">Создать сон</button>
-                        {successMessage && (
-                            <div className="success-message">
-                                {successMessage}
-                            </div>
-                        )}
-                    </div>
-
-                    <div>
                         <button
                             type="button"
                             onClick={handleBack}
@@ -392,11 +393,11 @@ function CreateDreamPage() {
                             Назад
                         </button>
                     </div>
-
                 </form>
             )}
+
         </div>
     );
 }
 
-export default CreateDreamPage;
+export default CreationTemplatesPage;
