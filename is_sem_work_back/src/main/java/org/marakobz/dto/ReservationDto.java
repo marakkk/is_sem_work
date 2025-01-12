@@ -1,15 +1,36 @@
 package org.marakobz.dto;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.List;
+import java.util.Set;
 
+@Getter
+@Setter
 @Data
 public class ReservationDto {
-    private Long reservationId;
-    private Long userId;
-    private Long dreamId;
-    private Long calendarId;
-    private LocalDateTime timeOfReservation;
-    private String status;
+    private String dreamName;
+    private String timeEra;
+    private String virtualEnvironment;
+    private String specialPowers;
+    private String physicalRules;
+    private String role;
+    private String genre;
+    private String scenario;
+    @Getter
+    @Setter
+    private boolean template;
+    private double price;
+    private List<CharactersDto> characters; // Characters
+
+    // Fields for the reservation itself
+    private Long architectId;
+    private double architectPrice;
+    private String date;
+    private String time;
+    private String timeOfReservation;
 }

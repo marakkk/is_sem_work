@@ -1,11 +1,17 @@
 package org.marakobz.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.marakobz.dto.DreamDto;
+import org.marakobz.dto.DreamTemplateDto;
 import org.marakobz.dto.DreamUserDto;
 import org.marakobz.model.Dream;
 import org.marakobz.service.DreamService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
 import java.util.List;
 
 @RestController
@@ -16,12 +22,21 @@ public class DreamController {
     private DreamService dreamService;
 
     @PostMapping("/create-own-dream")
-    public Dream createOwnDream(@RequestBody DreamDto dreamDto) {
-        return dreamService.createOwnDream(dreamDto);
+    public ResponseEntity<Object> createOwnDream(@RequestBody DreamDto dreamDto, HttpServletRequest request) {
+        try {
+            dreamService.createOwnDream(dreamDto, request);
+            return ResponseEntity.status(HttpStatus.CREATED).build();
+        } catch (ResponseStatusException e) {
+
+            return ResponseEntity.status(e.getStatusCode()).body(e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Произошла непредвиденная ошибка. Пожалуйста, повторите попытку.");
+        }
     }
 
     @GetMapping("/templates")
-    public List<DreamDto> getTemplateDreams() {
+    public List<DreamTemplateDto> getTemplateDreams() {
         return dreamService.getTemplateDreams();
     }
 
@@ -30,9 +45,6 @@ public class DreamController {
         return dreamService.getArchitects();
     }
 
-    @PostMapping("/assign-architect/{dreamId}")
-    public Dream assignArchitectToDream(@PathVariable Long dreamId, @RequestBody Long architectId) {
-        return dreamService.assignArchitectToDream(dreamId, architectId);
-    }
+
 }
 

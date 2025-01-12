@@ -13,7 +13,7 @@ public class Architect {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "users_id")
+    @JoinColumn(name = "users_id", referencedColumnName = "id")
     private DreamUser user;
 
     @Column(name = "price", nullable = false)
@@ -22,6 +22,5 @@ public class Architect {
     @Column(name = "rating")
     private int rating;
 
-    private long dreamId;
 
 }

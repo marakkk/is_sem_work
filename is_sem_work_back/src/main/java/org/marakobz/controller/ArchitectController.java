@@ -1,5 +1,7 @@
 package org.marakobz.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
+import org.marakobz.dto.ArchitectDto;
 import org.marakobz.dto.DreamDto;
 import org.marakobz.model.Architect;
 import org.marakobz.model.Dream;
@@ -8,11 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/dreams/architect-page")
+@RequestMapping("/dreams/architect")
 public class ArchitectController {
     @Autowired
     private ArchitectService architectService;
@@ -40,13 +43,28 @@ public class ArchitectController {
     }
 
     @PostMapping("/create-template")
-    public ResponseEntity<Dream> createTemplate(@RequestBody DreamDto dreamDto) {
+    public ResponseEntity<Object> createTemplate(@RequestBody DreamDto dreamDto, HttpServletRequest request) {
         try {
-            Dream createdDream = architectService.createTemplate(dreamDto);
-            return new ResponseEntity<>(createdDream, HttpStatus.CREATED);
+            architectService.createTemplate(dreamDto, request);
+            return ResponseEntity.status(HttpStatus.CREATED).build();
+        } catch (ResponseStatusException e) {
+            return ResponseEntity.status(e.getStatusCode()).body(e.getMessage());
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Произошла непредвиденная ошибка. Пожалуйста, повторите попытку.");
         }
     }
+
+    @GetMapping("/architects")
+    public ResponseEntity<List<Architect>> getArchitects() {
+        List<Architect> architects = architectService.getArchitects();
+        return ResponseEntity.ok(architects);
+    }
+
+    @GetMapping("/all")
+    public List<ArchitectDto> getAllArchitects() {
+        return architectService.getAllArchitects();
+    }
+
 }
 

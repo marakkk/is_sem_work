@@ -60,19 +60,14 @@ public class Dream {
     )
     private Set<Characters> characters;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "architect_id")
     private Architect architect;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "creator_id")
     private DreamUser creator;
 
-    @ManyToMany
-    @JoinTable(
-            name = "dream_architects",
-            joinColumns = @JoinColumn(name = "dream_id"),
-            inverseJoinColumns = @JoinColumn(name = "architect_id")
-    )
-    private Set<Architect> architects = new HashSet<>();
+
+
 }

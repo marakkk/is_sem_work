@@ -13,6 +13,7 @@ public class CharactersDto {
     private String appearance;
     private String relation;
     private String occupation;
-    private List<Long> dreamIds;
+    private List<Long> dreamIds;  //problem potential
+
 
 }

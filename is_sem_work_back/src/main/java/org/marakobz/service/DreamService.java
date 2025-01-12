@@ -1,6 +1,10 @@
 package org.marakobz.service;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.transaction.Transactional;
 import org.marakobz.dto.DreamDto;
+import org.marakobz.dto.DreamTemplateDto;
+import org.marakobz.dto.DreamTemplateMapper;
 import org.marakobz.dto.DreamUserDto;
 import org.marakobz.enums.*;
 import org.marakobz.model.*;
@@ -8,11 +12,16 @@ import org.marakobz.repository.ArchitectureRepository;
 import org.marakobz.repository.CharactersRepository;
 import org.marakobz.repository.DreamRepository;
 import org.marakobz.repository.UserRepository;
+import org.marakobz.security.JWTUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -33,8 +42,26 @@ public class DreamService {
     @Autowired
     private CharactersRepository charactersRepository;
 
-    public Dream createOwnDream(DreamDto dreamDto) {
+    private final AuthService authService;
+
+    public DreamService(AuthService authService) {
+        this.authService = authService;
+    }
+
+    @Transactional
+    public Dream createOwnDream(DreamDto dreamDto, HttpServletRequest request) {
+
         try {
+
+            String username = JWTUtil.extractUsernameFromRequest(request);
+            if (username == null) {
+                throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Unauthorized access attempt");
+            }
+            DreamUser creator = authService.getUserByUsername(username);
+            if (creator == null) {
+                throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not found");
+            }
+
             Dream dream = new Dream();
             dream.setName(dreamDto.getName());
             dream.setTimeEra(DreamTimeEra.valueOf(dreamDto.getTimeEra()));
@@ -46,6 +73,7 @@ public class DreamService {
             dream.setScenario(dreamDto.getScenario());
             dream.setTemplate(false);
             dream.setPrice(0);
+            dream.setCreator(creator);
 
             List<Characters> charactersList = dreamDto.getCharacters().stream()
                     .map(characterDto -> {
@@ -68,26 +96,33 @@ public class DreamService {
             throw e;
         }
     }
-    public List<DreamDto> getTemplateDreams() {
-        List<Dream> dreams = dreamRepository.findByTemplateTrue();
-        List<DreamDto> dreamDtos = new ArrayList<>();
 
-        for (Dream dream : dreams) {
-            DreamDto dreamDto = new DreamDto();
-            dreamDto.setName(dream.getName());
-            dreamDto.setTimeEra(dream.getTimeEra().toString());
-            dreamDto.setVirtualEnvironment(dream.getVirtualEnvironment().toString());
-            dreamDto.setSpecialPowers(dream.getSpecialPowers().toString());
-            dreamDto.setPhysicalRules(dream.getPhysicalRules().toString());
-            dreamDto.setRole(dream.getRole().toString());
-            dreamDto.setGenre(dream.getGenre().toString());
-            dreamDto.setScenario(dream.getScenario());
+    @Transactional
+    public List<DreamTemplateDto> getTemplateDreams() {
+        List<Dream> dreams = dreamRepository.findTemplateDreamsWithArchitect();  // Use custom query here
+        if (dreams.isEmpty()) {
+            return Collections.emptyList();
+        }
 
-            dreamDtos.add(dreamDto);
+        System.out.println("Mapping DreamTemplate DTOs");
+
+        // Mapping the Dream objects to DreamTemplateDto using the DreamTemplateMapper
+        List<DreamTemplateDto> dreamDtos = dreams.stream()
+                .map(dream -> {
+                    DreamTemplateDto dreamDto = DreamTemplateMapper.INSTANCE.dreamToDreamTemplateDto(dream);
+                    return dreamDto;
+                })
+                .collect(Collectors.toList());
+
+        // Log the mapped DTOs
+        System.out.println("Mapped DreamTemplate DTOs:");
+        for (DreamTemplateDto dto : dreamDtos) {
+            System.out.println(dto);
         }
 
         return dreamDtos;
     }
+
 
     public List<DreamUserDto> getArchitects() {
         List<DreamUser> architects = userRepository.findByRole(Roles.ARCHITECT);
@@ -105,22 +140,7 @@ public class DreamService {
     }
 
 
-    public Dream assignArchitectToDream(Long dreamId, Long architectId) {
-        Dream dream = dreamRepository.findById(dreamId)
-                .orElseThrow(() -> new RuntimeException("Dream not found"));
 
-        DreamUser architect = userRepository.findById(architectId)
-                .orElseThrow(() -> new RuntimeException("Architect not found"));
-
-        Architect architectEntity = new Architect();
-        architectEntity.setUser(architect);
-        architectEntity.setDreamId(dreamId);
-
-        dream.getArchitects().add(architectEntity);
-
-        dreamRepository.save(dream);
-        return dream;
-    }
 
 
 

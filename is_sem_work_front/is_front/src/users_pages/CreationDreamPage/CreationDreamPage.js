@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CreationDreamPage.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function CreateDreamPage() {
     const [name, setName] = useState('');
@@ -96,12 +97,15 @@ function CreateDreamPage() {
         return Object.keys(errors).length === 0;
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         if (!validateForm()) return;
 
+        const dreamId = uuidv4();  //
+
         const dreamData = {
+            id: dreamId,   //
             name,
             timeEra,
             virtualEnvironment,
@@ -110,7 +114,7 @@ function CreateDreamPage() {
             role,
             genre,
             scenario,
-            template,
+            template: false,
             price,
             characters: selectedCharacters.map(character => ({
                 name: character.name,
@@ -121,51 +125,42 @@ function CreateDreamPage() {
             })),
         };
 
-        const token = localStorage.getItem('token');
-
         try {
-            const response = await fetch('http://localhost:8080/api/dreams/create-own-dream', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
-                },
-                body: JSON.stringify(dreamData),
+            // Get existing dreams from localStorage
+            const storedDreams = JSON.parse(localStorage.getItem('dreams')) || [];
+
+            // Add the new dream to the array
+            storedDreams.push(dreamData);
+
+            // Save updated array back to localStorage
+            localStorage.setItem('dreams', JSON.stringify(storedDreams));
+
+            setSuccessMessage('Сон успешно сохранен в локальное хранилище!');
+
+            // Clear form fields
+            setName('');
+            setTimeEra('');
+            setVirtualEnvironment('');
+            setSpecialPowers('');
+            setPhysicalRules('');
+            setRole('');
+            setGenre('');
+            setScenario('');
+            setTemplate(false);
+            setPrice(0);
+            setSelectedCharacters([]);
+            setNewCharacter({
+                name: '',
+                characteristics: '',
+                appearance: '',
+                relation: '',
+                occupation: '',
             });
 
-            if (response.ok) {
-                setErrorMessage('');
-                setSuccessMessage('Сон успешно создан!');
-
-                const newDream = await response.json();
-                const newDreamId = newDream.id;
-
-                setName('');
-                setTimeEra('');
-                setVirtualEnvironment('');
-                setSpecialPowers('');
-                setPhysicalRules('');
-                setRole('');
-                setGenre('');
-                setScenario('');
-                setTemplate(false);
-                setPrice(0);
-                setSelectedCharacters([]);
-                setNewCharacter({
-                    name: '',
-                    characteristics: '',
-                    appearance: '',
-                    relation: '',
-                    occupation: '',
-                });
-
-                navigate(`/dreams/select-architect/${newDreamId}`);
-            } else {
-                const errorText = await response.json();
-                setErrorMessage(errorText.message || 'Ошибка при создании сна.');
-            }
+            // Optionally navigate to another page if needed
+            navigate(`/dreams/select-architect/${dreamId}`);
         } catch (error) {
-            setErrorMessage('Произошла ошибка при отправке данных на сервер.');
+            setErrorMessage('Произошла ошибка при сохранении сна в локальное хранилище.');
         }
     };
 

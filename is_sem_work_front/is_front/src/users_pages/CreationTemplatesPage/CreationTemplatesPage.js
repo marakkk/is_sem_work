@@ -125,7 +125,7 @@ function CreationTemplatesPage() {
         };
 
         try {
-            const response = await fetch('http://localhost:8080/api/dreams/architect-page/create-template', {
+            const response = await fetch('http://localhost:8080/api/dreams/architect/create-template', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

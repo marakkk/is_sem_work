@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CustomCalendar from '../components/Calendar/Calendar';
 import './HomePage.css';
 
 function HomePage() {
@@ -14,6 +13,10 @@ function HomePage() {
     useEffect(() => {
         if (!token) {
             navigate('/login');
+        } else {
+            const payload = token.split('.')[1];
+            const decodedPayload = JSON.parse(atob(payload));
+            setUserName(decodedPayload.username); // Assuming the username is stored in the JWT payload
         }
     }, [token, navigate]);
 
@@ -40,19 +43,9 @@ function HomePage() {
         navigate('/dreams/templates');
     };
 
-
     useEffect(() => {
-        const token = localStorage.getItem('token');
-
-        if (token) {
-            const payload = token.split('.')[1];
-            const decodedPayload = JSON.parse(atob(payload));
-            console.log(decodedPayload);
-        }
-
-
         const fetchReservations = async () => {
-            const response = await fetch('http://localhost:8080/api/dreams/home-page/reservations', {
+            const response = await fetch('http://localhost:8080/api/reservations/history', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -60,53 +53,78 @@ function HomePage() {
 
             if (response.ok) {
                 const data = await response.json();
-                setReservations(data);
+                setReservations(data); // Set reservations from the response
             } else {
                 console.error('Failed to fetch reservations');
             }
         };
 
         fetchReservations();
-    }, []);
+    }, [token]);
 
     return (
         <div className="home-container">
-            <div className="left-column">
-                <div className="header-user">
-                    <p>Добро пожаловать, {userName}</p>
-                    <button onClick={handleLogout} className="logout-button">
-                        Выйти
-                    </button>
+            <div className="header">
+                <h1>Добро пожаловать в DreamLand</h1>
+                <button onClick={handleLogout} className="logout-button">Выйти</button>
+            </div>
+
+            <div className="main-content">
+                <button onClick={handleCreateReservation} className="action-button">Создать бронь</button>
+
+                <div className="leave-review">
+                    <button className="action-button" onClick={handleLeaveReview}>Оставить отзыв</button>
                 </div>
 
                 <div className="reservations-block">
                     <h2>История бронирований</h2>
-                    <div className="reservations-list">
+                    <div className="reservations-table-container">
                         {reservations.length > 0 ? (
-                            reservations.map((reservation) => (
-                                <div key={reservation.reservationId} className="reservation-item">
-                                    <p><strong>Мечта:</strong> {reservation.dreamId}</p>
-                                    <p><strong>Дата:</strong> {new Date(reservation.timeOfReservation).toLocaleString()}</p>
-                                    <p><strong>Статус:</strong> {reservation.status}</p>
-                                </div>
-                            ))
+                            <table className="reservations-table">
+                                <thead>
+                                <tr>
+                                    <th>Название мечты</th>
+                                    <th>Эра времени</th>
+                                    <th>Виртуальная среда</th>
+                                    <th>Специальные способности</th>
+                                    <th>Физические правила</th>
+                                    <th>Роль</th>
+                                    <th>Жанр</th>
+                                    <th>Сценарий</th>
+                                    <th>Цена</th>
+                                    <th>Архитектор</th>
+                                    <th>Дата</th>
+                                    <th>Время</th>
+                                    <th>Статус</th>
+                                    <th>Время бронирования</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {reservations.map((reservation) => (
+                                    <tr key={reservation.timeOfReservation}>
+                                        <td>{reservation.dreamName}</td>
+                                        <td>{reservation.timeEra}</td>
+                                        <td>{reservation.virtualEnvironment}</td>
+                                        <td>{reservation.specialPowers || 'Нет'}</td>
+                                        <td>{reservation.physicalRules || 'Нет'}</td>
+                                        <td>{reservation.role}</td>
+                                        <td>{reservation.genre}</td>
+                                        <td>{reservation.scenario || 'Нет'}</td>
+                                        <td>{reservation.price}</td>
+                                        <td>{reservation.architectUsername}</td>
+                                        <td>{reservation.date}</td>
+                                        <td>{reservation.time}</td>
+                                        <td>{reservation.status}</td>
+                                        <td>{new Date(reservation.timeOfReservation).toLocaleString()}</td>
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </table>
                         ) : (
                             <p>Бронирования отсутствуют</p>
                         )}
                     </div>
-                    <button onClick={handleCreateReservation} className="action-button">Создать бронь</button>
                 </div>
-            </div>
-
-            <div className="right-column">
-                <h1>Добро пожаловать в DreamLand</h1>
-                <p>Выберите и забронируйте свои мечты!</p>
-
-                <div className="action-buttons">
-                    <button className="action-button" onClick={handleLeaveReview}>Оставить отзыв</button>
-                </div>
-
-                <CustomCalendar />
             </div>
 
             {isModalOpen && (

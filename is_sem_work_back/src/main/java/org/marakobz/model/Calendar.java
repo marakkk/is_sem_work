@@ -5,6 +5,7 @@ import lombok.Data;
 import org.marakobz.enums.CalendarStatus;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Data
 @Entity
@@ -15,12 +16,12 @@ public class Calendar {
     private long id;
 
     @Column(name = "time", nullable = false)
-    private LocalDateTime time;
+    private LocalTime time;
 
     @Column(name = "date", nullable = false)
     private LocalDate date;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status", nullable = false)
+    @Column(name = "status", nullable = false)   //available/not availabe
     private CalendarStatus status;
 }

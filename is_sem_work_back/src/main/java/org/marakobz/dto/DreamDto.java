@@ -18,6 +18,7 @@ public class DreamDto {
     private String role;
     private String scenario;
 
+
     @Getter
     @Setter
     private boolean template;
@@ -26,4 +27,6 @@ public class DreamDto {
     private Integer price;
     private Long architectId;
     private List<CharactersDto> characters;
+
+
 }

@@ -10,6 +10,7 @@
     overflow: hidden;
 }
 
+
 .create-form-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -18,6 +19,7 @@
     max-width: 1500px;
     margin-top: 20px;
     grid-auto-rows: minmax(100px, auto);
+
 }
 
 .form-left, .form-right {
