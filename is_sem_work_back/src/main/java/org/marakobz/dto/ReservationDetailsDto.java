@@ -8,6 +8,8 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class ReservationDetailsDto {
+
+    private Long reservationId;
     private String dreamName;
     private String timeEra;
     private String virtualEnvironment;
@@ -23,5 +25,6 @@ public class ReservationDetailsDto {
     private String timeOfReservation;
     private String architectUsername; // New field
     private String status;
+    private List<CharactersDto> characters;
 
 }

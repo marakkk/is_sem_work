@@ -13,6 +13,7 @@ import java.util.Set;
 @Setter
 @Data
 public class ReservationDto {
+    private Long reservationId;
     private String dreamName;
     private String timeEra;
     private String virtualEnvironment;
@@ -25,9 +26,8 @@ public class ReservationDto {
     @Setter
     private boolean template;
     private double price;
-    private List<CharactersDto> characters; // Characters
+    private List<CharactersDto> characters;
 
-    // Fields for the reservation itself
     private Long architectId;
     private double architectPrice;
     private String date;

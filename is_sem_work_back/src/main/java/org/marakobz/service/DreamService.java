@@ -97,24 +97,20 @@ public class DreamService {
         }
     }
 
+
     @Transactional
     public List<DreamTemplateDto> getTemplateDreams() {
-        List<Dream> dreams = dreamRepository.findTemplateDreamsWithArchitect();  // Use custom query here
+        List<Dream> dreams = dreamRepository.findTemplateDreamsWithArchitect(); // Используем кастомный запрос
         if (dreams.isEmpty()) {
             return Collections.emptyList();
         }
 
-        System.out.println("Mapping DreamTemplate DTOs");
+        DreamTemplateMapper mapper = new DreamTemplateMapper();
 
-        // Mapping the Dream objects to DreamTemplateDto using the DreamTemplateMapper
         List<DreamTemplateDto> dreamDtos = dreams.stream()
-                .map(dream -> {
-                    DreamTemplateDto dreamDto = DreamTemplateMapper.INSTANCE.dreamToDreamTemplateDto(dream);
-                    return dreamDto;
-                })
+                .map(mapper::dreamToDreamTemplateDto)
                 .collect(Collectors.toList());
 
-        // Log the mapped DTOs
         System.out.println("Mapped DreamTemplate DTOs:");
         for (DreamTemplateDto dto : dreamDtos) {
             System.out.println(dto);
@@ -122,6 +118,7 @@ public class DreamService {
 
         return dreamDtos;
     }
+
 
 
     public List<DreamUserDto> getArchitects() {
@@ -139,9 +136,13 @@ public class DreamService {
                 .collect(Collectors.toList());
     }
 
+    public List<Characters> getCharactersByDreamId(Long dreamId) {
+        logger.info("Received ID: {}", dreamId);
 
-
-
+        Dream dream = dreamRepository.findById(dreamId)
+                .orElseThrow(() -> new RuntimeException("Dream not found with ID: " + dreamId));
+        return new ArrayList<>(dream.getCharacters());
+    }
 
 
 }

@@ -7,7 +7,8 @@ function HomePage() {
     const [userName, setUserName] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate();
-
+    const [isCharacterModalOpen, setIsCharacterModalOpen] = useState(false);
+    const [selectedCharacters, setSelectedCharacters] = useState([]);
     const token = localStorage.getItem('token');
 
     useEffect(() => {
@@ -43,19 +44,48 @@ function HomePage() {
         navigate('/dreams/templates');
     };
 
-    useEffect(() => {
-        const fetchReservations = async () => {
-            const response = await fetch('http://localhost:8080/api/reservations/history', {
+    const handleShowCharacters = async (reservationId) => {
+        try {
+            const response = await fetch(`http://localhost:8080/api/reservations/${reservationId}/characters`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
             });
 
             if (response.ok) {
-                const data = await response.json();
-                setReservations(data); // Set reservations from the response
+                const characters = await response.json();
+                setSelectedCharacters(characters);
+                setIsCharacterModalOpen(true);
             } else {
-                console.error('Failed to fetch reservations');
+                console.error('Не удалось загрузить персонажей');
+            }
+        } catch (error) {
+            console.error('Ошибка при загрузке персонажей:', error);
+        }
+    };
+
+    const handleCloseCharacterModal = () => {
+        setSelectedCharacters([]);
+        setIsCharacterModalOpen(false);
+    };
+
+    useEffect(() => {
+        const fetchReservations = async () => {
+            try {
+                const response = await fetch('http://localhost:8080/api/reservations/history', {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    setReservations(data);
+                } else {
+                    console.error('Failed to fetch reservations');
+                }
+            } catch (error) {
+                console.error('Ошибка при загрузке бронирований:', error);
             }
         };
 
@@ -97,6 +127,7 @@ function HomePage() {
                                     <th>Время</th>
                                     <th>Статус</th>
                                     <th>Время бронирования</th>
+                                    <th>Персонажи</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -116,6 +147,14 @@ function HomePage() {
                                         <td>{reservation.time}</td>
                                         <td>{reservation.status}</td>
                                         <td>{new Date(reservation.timeOfReservation).toLocaleString()}</td>
+                                        <td>
+                                            <button
+                                                onClick={() => handleShowCharacters(reservation.reservationId)}
+                                                className="action-button"
+                                            >
+                                                Узнать
+                                            </button>
+                                        </td>
                                     </tr>
                                 ))}
                                 </tbody>
@@ -134,6 +173,39 @@ function HomePage() {
                         <button onClick={handleCreateOwnDream}>Создать свой сон</button>
                         <button onClick={handleSelectTemplate}>Выбрать из шаблонов</button>
                         <button onClick={() => setIsModalOpen(false)}>Закрыть</button>
+                    </div>
+                </div>
+            )}
+
+            {isCharacterModalOpen && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <h2>Персонажи</h2>
+                        {selectedCharacters.length > 0 ? (
+                            <table className="characters-table">
+                                <thead>
+                                <tr>
+                                    <th>Имя</th>
+                                    <th>Характеристика</th>
+                                    <th>Внешность</th>
+                                    <th>Роль</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {selectedCharacters.map((character, index) => (
+                                    <tr key={index}>
+                                        <td>{character.name}</td>
+                                        <td>{character.characteristics || 'Нет'}</td>
+                                        <td>{character.appearance || 'Нет'}</td>
+                                        <td>{character.relation || 'Нет'}</td>
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </table>
+                        ) : (
+                            <p>Нет персонажей</p>
+                        )}
+                        <button onClick={handleCloseCharacterModal} className="close-modal-button">Закрыть</button>
                     </div>
                 </div>
             )}

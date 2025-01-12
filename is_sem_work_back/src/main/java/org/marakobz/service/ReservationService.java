@@ -19,6 +19,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
@@ -219,8 +220,6 @@ public class ReservationService {
             reservations = reservationRepository.findReservationsByUserId(creator.getId());
         }
 
-        // Log reservations retrieved from the repository
-
         if (reservations.isEmpty()) {
             return Collections.emptyList();
         }
@@ -233,8 +232,11 @@ public class ReservationService {
         return reservationDetailsDtos;
     }
 
-
-
+    public List<Characters> getCharactersByReservationId(Long reservationId) {
+        Reservation reservation = reservationRepository.findById(reservationId)
+                .orElseThrow(() -> new RuntimeException("Dream not found with ID: " + reservationId));
+        return new ArrayList<>(reservation.getDream().getCharacters());
+    }
 
 
 }

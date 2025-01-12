@@ -18,6 +18,4 @@ public class Admin {
     @Column(name = "status", nullable = false)
     private AdminStatus status;
 
-    @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
-    private List<DreamUser> users;
 }

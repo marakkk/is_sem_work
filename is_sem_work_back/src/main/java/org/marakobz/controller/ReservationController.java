@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.marakobz.dto.ReservationDetailsDto;
 import org.marakobz.dto.ReservationDto;
 import org.marakobz.dto.ReservationTemplateDto;
+import org.marakobz.model.Characters;
 import org.marakobz.model.Reservation;
 import org.marakobz.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +62,12 @@ public class ReservationController {
     @GetMapping("/history")
     public List<ReservationDetailsDto> getReservations(HttpServletRequest request) {
         return reservationService.getReservations(request);
+    }
+
+    @GetMapping("/{reservationId}/characters")
+    public ResponseEntity<List<Characters>> getCharactersByReservationId(@PathVariable Long reservationId) {
+        List<Characters> characters = reservationService.getCharactersByReservationId(reservationId);
+        return ResponseEntity.ok(characters);
     }
 
 }

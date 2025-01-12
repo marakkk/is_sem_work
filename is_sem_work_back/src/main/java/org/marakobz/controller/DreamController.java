@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.marakobz.dto.DreamDto;
 import org.marakobz.dto.DreamTemplateDto;
 import org.marakobz.dto.DreamUserDto;
+import org.marakobz.model.Characters;
 import org.marakobz.model.Dream;
 import org.marakobz.service.DreamService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,10 @@ public class DreamController {
         return dreamService.getArchitects();
     }
 
-
+    @GetMapping("/{dreamId}/characters")
+    public ResponseEntity<List<Characters>> getCharactersByDreamId(@PathVariable Long dreamId) {
+        List<Characters> characters = dreamService.getCharactersByDreamId(dreamId);
+        return ResponseEntity.ok(characters);
+    }
 }
 

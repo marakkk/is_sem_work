@@ -24,6 +24,4 @@ public class Characters {
     @Enumerated(EnumType.STRING)
     private CharactersOccupation occupation;
 
-    @ManyToMany(mappedBy = "characters")
-    private Set<Dream> dreams;
 }

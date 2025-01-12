@@ -161,3 +161,93 @@
 .modal-content button:hover {
     background-color: #4e5393;
 }
+/* Таблица персонажей в модальном окне */
+.characters-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.characters-table th,
+.characters-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.characters-table th {
+    background-color: #5a60a3;
+    color: #fff;
+    font-weight: bold;
+}
+
+.characters-table td {
+    background-color: #fff;
+}
+
+.characters-table tr:nth-child(even) td {
+    background-color: #f4f4f4;
+}
+
+/* Стиль для модального окна с таблицей */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: auto;
+    max-width: 900px;
+    max-height: 80vh;
+    overflow-y: auto; /* Allows scrolling if content exceeds height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Кнопка для закрытия модального окна */
+.close-modal-button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.close-modal-button:hover {
+    background-color: #e03e3e;
+}
+
+/* Стиль для кнопок в модальном окне */
+.modal-content button {
+    background-color: #5a60a3;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #4e5393;
+}

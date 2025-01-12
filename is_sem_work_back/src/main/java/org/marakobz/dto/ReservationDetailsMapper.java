@@ -1,27 +1,52 @@
 package org.marakobz.dto;
 
-import org.mapstruct.*;
 import org.marakobz.model.Reservation;
+import org.springframework.stereotype.Component;
 
-@Mapper(componentModel = "spring")
-public interface ReservationDetailsMapper {
+@Component
+public class ReservationDetailsMapper {
 
-    // Mapping for ReservationDetailsDto
-    @Mapping(source = "dream.name", target = "dreamName")
-    @Mapping(source = "dream.timeEra", target = "timeEra")
-    @Mapping(source = "dream.virtualEnvironment", target = "virtualEnvironment")
-    @Mapping(source = "dream.specialPowers", target = "specialPowers")
-    @Mapping(source = "dream.physicalRules", target = "physicalRules")
-    @Mapping(source = "dream.role", target = "role")
-    @Mapping(source = "dream.genre", target = "genre")
-    @Mapping(source = "dream.scenario", target = "scenario")
-    @Mapping(source = "dream.template", target = "template")
-    @Mapping(source = "dream.price", target = "price")
-    @Mapping(source = "calendar.date", target = "date", dateFormat = "dd-MM-yyyy")
-    @Mapping(source = "calendar.time", target = "time", dateFormat = "HH:mm:ss")
-    @Mapping(source = "timeOfReservation", target = "timeOfReservation")
-    @Mapping(source = "architect.user.username", target = "architectUsername") // Architect's username
-    @Mapping(source = "status", target = "status")
-    ReservationDetailsDto toDetailsDto(Reservation reservation);
+    private final DreamMapper dreamMapper;
+    private final ArchitectMapper architectMapper;
+    private final CalendarMapper calendarMapper;
 
+    public ReservationDetailsMapper(DreamMapper dreamMapper, ArchitectMapper architectMapper, CalendarMapper calendarMapper) {
+        this.dreamMapper = dreamMapper;
+        this.architectMapper = architectMapper;
+        this.calendarMapper = calendarMapper;
+    }
+
+    public ReservationDetailsDto toDetailsDto(Reservation reservation) {
+        if (reservation == null) {
+            throw new IllegalArgumentException("Reservation is null");
+        }
+
+        DreamDto dreamDto = dreamMapper.toDto(reservation.getDream());
+        ArchitectDto architectDto = architectMapper.toDto(reservation.getArchitect());
+        String formattedDate = calendarMapper.toFormattedDate(reservation.getCalendar());
+        String formattedTime = calendarMapper.toFormattedTime(reservation.getCalendar());
+
+        ReservationDetailsDto dto = new ReservationDetailsDto(
+                reservation.getId(),
+                dreamDto.getName(),
+                dreamDto.getTimeEra(),
+                dreamDto.getVirtualEnvironment(),
+                dreamDto.getSpecialPowers(),
+                dreamDto.getPhysicalRules(),
+                dreamDto.getRole(),
+                dreamDto.getGenre(),
+                dreamDto.getScenario(),
+                dreamDto.isTemplate(),
+                dreamDto.getPrice(),
+                formattedDate,
+                formattedTime,
+                reservation.getTimeOfReservation().toString(),
+                architectDto.getUsername(),
+                reservation.getStatus().toString(),
+                dreamDto.getCharacters()
+        );
+
+        return dto;
+    }
 }
+

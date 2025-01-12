@@ -40,11 +40,6 @@ public class DreamUser implements UserDetails {
     @JoinColumn(name = "admin_id")
     private Admin admin;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Reservation> reservations;
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Architect> architects;
 
     @ManyToMany
     @JoinTable(

@@ -1,19 +1,32 @@
 package org.marakobz.dto;
 
-
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
-import org.marakobz.dto.DreamTemplateDto;
 import org.marakobz.model.Dream;
 
-@Mapper
-public interface DreamTemplateMapper {
-    DreamTemplateMapper INSTANCE = Mappers.getMapper(DreamTemplateMapper.class);
+public class DreamTemplateMapper {
 
-    @Mapping(source = "architect.user.username", target = "architectName")
-    @Mapping(source = "architect.rating", target = "architectRating")
-    @Mapping(source = "architect.price", target = "architectPrice")
-    @Mapping(source = "architect.id", target = "architectId")  //
-    DreamTemplateDto dreamToDreamTemplateDto(Dream dream);
+    public DreamTemplateDto dreamToDreamTemplateDto(Dream dream) {
+        if (dream == null) {
+            return null;
+        }
+
+        DreamTemplateDto dto = new DreamTemplateDto();
+        dto.setId(dream.getId());
+        dto.setName(dream.getName());
+        dto.setTimeEra(dream.getTimeEra().toString());
+        dto.setVirtualEnvironment(dream.getVirtualEnvironment().toString());
+        dto.setSpecialPowers(dream.getSpecialPowers().toString());
+        dto.setPhysicalRules(dream.getPhysicalRules().toString());
+        dto.setRole(dream.getRole().toString());
+        dto.setScenario(dream.getScenario().toString());
+        dto.setGenre(dream.getGenre().toString());
+        dto.setPrice(dream.getPrice());
+        dto.setArchitectId(dream.getArchitect().getId());
+        dto.setTemplate(true);
+        dto.setArchitectName(dream.getArchitect().getUser().getUsername());
+        dto.setArchitectRating(dream.getArchitect().getRating());
+        dto.setArchitectPrice(dream.getArchitect().getPrice());
+
+
+        return dto;
+    }
 }
