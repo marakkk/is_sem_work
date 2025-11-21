@@ -29,8 +29,11 @@ public class ReservationDto {
     private List<CharactersDto> characters;
 
     private Long architectId;
+    private Long usersDreamsId;
     private double architectPrice;
     private String date;
     private String time;
+    private String status;
     private String timeOfReservation;
+
 }

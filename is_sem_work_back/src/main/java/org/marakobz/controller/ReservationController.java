@@ -1,9 +1,8 @@
 package org.marakobz.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
-import org.marakobz.dto.ReservationDetailsDto;
-import org.marakobz.dto.ReservationDto;
-import org.marakobz.dto.ReservationTemplateDto;
+import org.marakobz.dto.*;
+import org.marakobz.model.Calendar;
 import org.marakobz.model.Characters;
 import org.marakobz.model.Reservation;
 import org.marakobz.service.ReservationService;
@@ -13,7 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/reservations")
@@ -70,4 +71,34 @@ public class ReservationController {
         return ResponseEntity.ok(characters);
     }
 
+    @GetMapping("/calendar-entries")
+    public ResponseEntity<List<CalendarDto>> getCalendarEntries(
+            @RequestParam String date,
+            @RequestParam String time,
+            @RequestParam(required = false) String status
+    ) {
+        try {
+            List<Calendar> calendarEntries = reservationService.getCalendarEntries(date, time, status);
+            List<CalendarDto> response = calendarEntries.stream()
+                    .map(entry -> new CalendarDto(
+                            entry.getId(),
+                            entry.getDate(),
+                            entry.getTime(),
+                            entry.getStatus()
+                    ))
+                    .collect(Collectors.toList());
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Collections.emptyList());
+        }
+    }
+
+
+    @PutMapping("/update-status/{reservationId}")
+    public ResponseEntity<Reservation> updateReservationStatus(@PathVariable Long reservationId) {
+
+        Reservation updatedReservation = reservationService.updateReservationStatus(reservationId);
+
+        return ResponseEntity.ok(updatedReservation);
+    }
 }

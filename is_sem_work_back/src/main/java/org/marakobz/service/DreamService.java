@@ -2,16 +2,10 @@ package org.marakobz.service;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.transaction.Transactional;
-import org.marakobz.dto.DreamDto;
-import org.marakobz.dto.DreamTemplateDto;
-import org.marakobz.dto.DreamTemplateMapper;
-import org.marakobz.dto.DreamUserDto;
+import org.marakobz.dto.*;
 import org.marakobz.enums.*;
 import org.marakobz.model.*;
-import org.marakobz.repository.ArchitectureRepository;
-import org.marakobz.repository.CharactersRepository;
-import org.marakobz.repository.DreamRepository;
-import org.marakobz.repository.UserRepository;
+import org.marakobz.repository.*;
 import org.marakobz.security.JWTUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +14,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -31,9 +27,6 @@ public class DreamService {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private ArchitectureRepository architectureRepository;
-
     private static final Logger logger = LoggerFactory.getLogger(DreamService.class);
 
     @Autowired
@@ -41,6 +34,10 @@ public class DreamService {
 
     @Autowired
     private CharactersRepository charactersRepository;
+
+    @Autowired
+    private UsersDreamRepository usersDreamRepository;
+
 
     private final AuthService authService;
 
@@ -74,6 +71,13 @@ public class DreamService {
             dream.setTemplate(false);
             dream.setPrice(0);
             dream.setCreator(creator);
+
+            UsersDream usersDream = new UsersDream();
+            usersDream.setDream(dream);
+            usersDream.setUser(creator);
+            usersDreamRepository.save(usersDream);
+
+            logger.info(usersDream.toString());
 
             List<Characters> charactersList = dreamDto.getCharacters().stream()
                     .map(characterDto -> {
@@ -143,6 +147,9 @@ public class DreamService {
                 .orElseThrow(() -> new RuntimeException("Dream not found with ID: " + dreamId));
         return new ArrayList<>(dream.getCharacters());
     }
+
+
+
 
 
 }

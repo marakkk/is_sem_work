@@ -1,5 +1,6 @@
 package org.marakobz.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
@@ -36,18 +37,16 @@ public class DreamUser implements UserDetails {
     @Column(name = "role", nullable = false)
     private Roles role;
 
-    @ManyToOne
-    @JoinColumn(name = "admin_id")
-    private Admin admin;
 
 
-    @ManyToMany
-    @JoinTable(
-            name = "users_dreams",
-            joinColumns = @JoinColumn(name = "users_id"),
-            inverseJoinColumns = @JoinColumn(name = "dream_id")
-    )
-    private Set<Dream> dreams;
+
+//    @ManyToMany
+//    @JoinTable(
+//            name = "users_dreams",
+//            joinColumns = @JoinColumn(name = "users_id"),
+//            inverseJoinColumns = @JoinColumn(name = "dream_id")
+//    )
+//    private Set<Dream> dreams;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

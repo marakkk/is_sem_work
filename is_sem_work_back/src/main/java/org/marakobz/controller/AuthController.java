@@ -1,6 +1,8 @@
 package org.marakobz.controller;
 
+import org.marakobz.enums.AdminStatus;
 import org.marakobz.model.DreamUser;
+import org.marakobz.repository.UserRepository;
 import org.marakobz.service.AuthService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,9 +19,11 @@ public class AuthController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
     private final AuthService authService;
+    private final UserRepository userRepository;
 
-    public AuthController(AuthService authService) {
+    public AuthController(AuthService authService, UserRepository userRepository) {
         this.authService = authService;
+        this.userRepository = userRepository;
     }
 
     @PostMapping("/register")
@@ -50,5 +54,16 @@ public class AuthController {
             logger.warn("Failed login attempt for user: {}", user.getUsername());
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
+    }
+
+    @GetMapping("/status")
+    public ResponseEntity<Map<String, String>> getUserStatus(@RequestParam String username) {
+        DreamUser user = userRepository.findByUsername(username);
+        if (user == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", "User not found"));
+        }
+
+        AdminStatus status = authService.getUserStatus(user);
+        return ResponseEntity.ok(Map.of("status", status.toString()));
     }
 }

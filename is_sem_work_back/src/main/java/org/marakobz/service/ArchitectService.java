@@ -5,16 +5,12 @@ import jakarta.transaction.Transactional;
 import org.marakobz.dto.ArchitectDto;
 import org.marakobz.dto.DreamDto;
 import org.marakobz.enums.*;
-import org.marakobz.model.Architect;
-import org.marakobz.model.Characters;
-import org.marakobz.model.Dream;
-import org.marakobz.model.DreamUser;
-import org.marakobz.repository.ArchitectureRepository;
-import org.marakobz.repository.CharactersRepository;
-import org.marakobz.repository.DreamRepository;
+import org.marakobz.model.*;
+import org.marakobz.repository.*;
 import org.marakobz.security.JWTUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -27,17 +23,33 @@ import java.util.stream.Collectors;
 @Service
 public class ArchitectService {
 
+    @Autowired
     private final DreamRepository dreamRepository;
+
+    @Autowired
     private final ArchitectureRepository architectureRepository;
+
+    @Autowired
     private final CharactersRepository charactersRepository;
+
+    @Autowired
+    private final ReservationRepository reservationRepository;
+
+    @Autowired
+    private final UsersDreamRepository usersDreamRepository;
+
+
+
     private static final Logger logger = LoggerFactory.getLogger(ArchitectService.class);
     private final AuthService authService;
 
-    public ArchitectService(DreamRepository dreamRepository, ArchitectureRepository architectRepository, CharactersRepository charactersRepository, AuthService authService) {
+    public ArchitectService(DreamRepository dreamRepository, ArchitectureRepository architectRepository, CharactersRepository charactersRepository, AuthService authService, ReservationRepository reservationRepository, UsersDreamRepository usersDreamRepository) {
         this.dreamRepository = dreamRepository;
         this.architectureRepository = architectRepository;
         this.charactersRepository = charactersRepository;
         this.authService = authService;
+        this.reservationRepository = reservationRepository;
+        this.usersDreamRepository = usersDreamRepository;
     }
 
     public List<Architect> getArchitects() {
@@ -55,14 +67,24 @@ public class ArchitectService {
                 .collect(Collectors.toList());
     }
 
-
-    public List<Dream> getRequestsForDreams() {
-        return dreamRepository.findByTemplateTrue();
-    }
-
     public List<Architect> getArchitectRatings() {
-        return architectureRepository.findAllByOrderByRatingDesc();
+        List<Architect> architects = architectureRepository.findAll();
+        for (Architect architect : architects) {
+            try {
+                Double averageRating = architectureRepository.getAverageRatingForArchitect(architect);
+
+                if (averageRating != null) {
+                    architect.setRating(averageRating.intValue());
+                } else {
+                    architect.setRating(1);
+                }
+            } catch (Exception e) {
+                logger.error("Ошибка при вычислении рейтинга для архитектора {}: {}", architect.getId(), e.getMessage());
+            }
+        }
+        return architects;
     }
+
 
     public Dream updateDreamPrice(Long dreamId, int price) {
         Dream dream = dreamRepository.findById(dreamId).orElseThrow(() -> new RuntimeException("Dream not found"));
@@ -101,6 +123,9 @@ public class ArchitectService {
             dream.setPrice(dreamDto.getPrice());
             dream.setArchitect(architect);
 
+            UsersDream usersDream = new UsersDream();
+            usersDream.setDream(dream);
+            usersDreamRepository.save(usersDream);
 
             List<Characters> charactersList = dreamDto.getCharacters().stream()
                     .map(characterDto -> {
@@ -120,11 +145,11 @@ public class ArchitectService {
             Dream savedDream = dreamRepository.save(dream);
 
 
-
             return savedDream;
         } catch (Exception e) {
             logger.error("Ошибка при создании шаблона сна: ", e);
             throw e;
         }
     }
+
 }

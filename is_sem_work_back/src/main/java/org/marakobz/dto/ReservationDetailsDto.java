@@ -22,9 +22,13 @@ public class ReservationDetailsDto {
     private double price;
     private String date;
     private String time;
+    private String calendarStatus;
     private String timeOfReservation;
     private String architectUsername; // New field
     private String status;
     private List<CharactersDto> characters;
+    private Long usersDreamsId;
+    private Long architectId;
+
 
 }

@@ -6,6 +6,7 @@ import org.marakobz.enums.CalendarStatus;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Set;
 
 @Data
 @Entity
@@ -22,6 +23,10 @@ public class Calendar {
     private LocalDate date;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status", nullable = false)   //available/not availabe
+    @Column(name = "status", nullable = false)
     private CalendarStatus status;
+
+    @OneToMany(mappedBy = "calendar", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Reservation> reservations;
+
 }

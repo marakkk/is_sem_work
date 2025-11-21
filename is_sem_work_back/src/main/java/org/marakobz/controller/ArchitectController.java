@@ -5,7 +5,10 @@ import org.marakobz.dto.ArchitectDto;
 import org.marakobz.dto.DreamDto;
 import org.marakobz.model.Architect;
 import org.marakobz.model.Dream;
+import org.marakobz.model.Reservation;
 import org.marakobz.service.ArchitectService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,12 +22,6 @@ import java.util.List;
 public class ArchitectController {
     @Autowired
     private ArchitectService architectService;
-
-    @GetMapping("/requests")
-    public ResponseEntity<List<Dream>> getRequestsForDreams() {
-        List<Dream> dreams = architectService.getRequestsForDreams();
-        return new ResponseEntity<>(dreams, HttpStatus.OK);
-    }
 
     @GetMapping("/ratings")
     public ResponseEntity<List<Architect>> getArchitectRatings() {

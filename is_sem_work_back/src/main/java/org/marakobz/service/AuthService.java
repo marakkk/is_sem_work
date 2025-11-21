@@ -1,9 +1,12 @@
 package org.marakobz.service;
 
 import jakarta.persistence.NoResultException;
+import org.marakobz.enums.AdminStatus;
 import org.marakobz.enums.Roles;
+import org.marakobz.model.Admin;
 import org.marakobz.model.Architect;
 import org.marakobz.model.DreamUser;
+import org.marakobz.repository.AdminRepository;
 import org.marakobz.repository.ArchitectureRepository;
 import org.marakobz.repository.UserRepository;
 import org.marakobz.security.JWTUtil;
@@ -21,10 +24,12 @@ public class AuthService implements UserDetailsService {
     private final UserRepository userRepository;
     private static final Logger logger = LoggerFactory.getLogger(AuthService.class);
     private final ArchitectureRepository architectureRepository;
+    private final AdminRepository adminRepository;
 
-    public AuthService(UserRepository userRepository, ArchitectureRepository architectureRepository) {
+    public AuthService(UserRepository userRepository, ArchitectureRepository architectureRepository, AdminRepository adminRepository) {
         this.userRepository = userRepository;
         this.architectureRepository = architectureRepository;
+        this.adminRepository = adminRepository;
     }
 
     @Transactional
@@ -39,8 +44,29 @@ public class AuthService implements UserDetailsService {
             architect.setPrice(15);
             architect.setRating(0);
             architect.setUser(user);
+            architect.setStatus(AdminStatus.REQUESTED); // Set status to REQUESTED
             architectureRepository.save(architect);
+        } else if (user.getRole() == Roles.ADMIN) {
+            logger.info("Creating admin entry for user: {}", user.getUsername());
+            Admin admin = new Admin();
+            admin.setUser(user);
+            admin.setStatus(AdminStatus.REQUESTED); // Set status to REQUESTED
+            adminRepository.save(admin); // Assuming you have an adminRepository
         }
+    }
+
+
+    public AdminStatus getUserStatus(DreamUser user) {
+        if (user.getRole() == Roles.ARCHITECT) {
+            Architect architect = architectureRepository.findByUser(user)
+                    .orElseThrow(() -> new NoResultException("Architect not found"));
+            return architect.getStatus();
+        } else if (user.getRole() == Roles.ADMIN) {
+            Admin admin = adminRepository.findByUser(user)
+                    .orElseThrow(() -> new NoResultException("Admin not found"));
+            return admin.getStatus();
+        }
+        return null;
     }
 
 
@@ -48,6 +74,21 @@ public class AuthService implements UserDetailsService {
         try {
             DreamUser user = userRepository.findByUsername(username);
             if (user != null && JWTUtil.verifyPassword(password, user.getPassword())) {
+                if (user.getRole() == Roles.ARCHITECT) {
+                    Architect architect = architectureRepository.findByUser(user)
+                            .orElseThrow(() -> new NoResultException("Architect not found"));
+                    if (architect.getStatus() != AdminStatus.APPROVED) {
+                        logger.warn("Architect not approved: {}", username);
+                        return null;
+                    }
+                } else if (user.getRole() == Roles.ADMIN) {
+                    Admin admin = adminRepository.findByUser(user)
+                            .orElseThrow(() -> new NoResultException("Admin not found"));
+                    if (admin.getStatus() != AdminStatus.APPROVED) {
+                        logger.warn("Admin not approved: {}", username);
+                        return null;
+                    }
+                }
                 logger.info("User logged in: {}", username);
                 return JWTUtil.generateToken(user);
             }

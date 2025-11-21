@@ -1,6 +1,7 @@
 package org.marakobz.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
+import org.marakobz.dto.CalendarDto;
 import org.marakobz.dto.DreamDto;
 import org.marakobz.dto.DreamTemplateDto;
 import org.marakobz.dto.DreamUserDto;
@@ -13,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -51,5 +53,7 @@ public class DreamController {
         List<Characters> characters = dreamService.getCharactersByDreamId(dreamId);
         return ResponseEntity.ok(characters);
     }
+
+
 }
 

@@ -1,5 +1,7 @@
 package org.marakobz.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.marakobz.enums.AdminStatus;
@@ -18,4 +20,8 @@ public class Admin {
     @Column(name = "status", nullable = false)
     private AdminStatus status;
 
+    @ManyToOne
+    @JoinColumn(name = "users_id", referencedColumnName = "id")
+    @JsonBackReference("admin-dream_user")
+    private DreamUser user;
 }

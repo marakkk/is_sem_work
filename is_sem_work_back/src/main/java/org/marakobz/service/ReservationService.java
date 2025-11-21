@@ -1,14 +1,14 @@
 package org.marakobz.service;
 
+import jakarta.persistence.NoResultException;
 import jakarta.servlet.http.HttpServletRequest;
-import org.marakobz.dto.ReservationDetailsDto;
-import org.marakobz.dto.ReservationDto;
-import org.marakobz.dto.ReservationDetailsMapper;
-import org.marakobz.dto.ReservationTemplateDto;
+import org.marakobz.dto.*;
 import org.marakobz.enums.*;
 import org.marakobz.model.*;
 import org.marakobz.repository.*;
 import org.marakobz.security.JWTUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -44,10 +44,12 @@ public class ReservationService {
     private ReservationRepository reservationRepository;
 
     @Autowired
-    private UserRepository userRepository;
+    private UsersDreamRepository usersDreamRepository;
 
     private final AuthService authService;
     private final ReservationDetailsMapper reservationMapper;
+
+    private static final Logger logger = LoggerFactory.getLogger(ReservationService.class);
 
     public ReservationService(AuthService authService, ReservationDetailsMapper reservationMapper) {
         this.authService = authService;
@@ -67,9 +69,7 @@ public class ReservationService {
                 throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not found");
             }
 
-            System.out.println("Creating reservation for user " + username);
 
-            // Create and save Dream
             Dream dream = new Dream();
             dream.setName(reservationDto.getDreamName());
             dream.setTimeEra(DreamTimeEra.valueOf(reservationDto.getTimeEra()));
@@ -80,8 +80,6 @@ public class ReservationService {
             dream.setGenre(DreamGenre.valueOf(reservationDto.getGenre()));
             dream.setScenario(reservationDto.getScenario());
             dream.setTemplate(reservationDto.isTemplate());
-
-            System.out.println("Reservation DTO: " + reservationDto);
 
 
             Architect architect = architectRepository.findById(reservationDto.getArchitectId())
@@ -99,6 +97,10 @@ public class ReservationService {
 
             System.out.println("Reservation Architect ID: " + reservationDto.getArchitectId());
 
+            UsersDream usersDream = new UsersDream();
+            usersDream.setDream(dream);
+            usersDream.setUser(creator);
+            usersDreamRepository.save(usersDream);
 
             // Add Characters
             Set<Characters> characters = reservationDto.getCharacters().stream().map(characterDto -> {
@@ -111,8 +113,6 @@ public class ReservationService {
                 return characterRepository.save(character);
             }).collect(Collectors.toSet());
             dream.setCharacters(characters);
-
-
 
             dreamRepository.save(dream);
 
@@ -155,27 +155,27 @@ public class ReservationService {
                 throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "User not found");
             }
 
-            System.out.println("Creating template reservation for user " + username);
 
-            // Validate the template and architect
             Dream originalTemplate = dreamRepository.findById(templateDto.getOriginalTemplateId())
                     .orElseThrow(() -> new IllegalArgumentException("Original template not found"));
 
             Architect architect = architectRepository.findById(templateDto.getArchitectId())
                     .orElseThrow(() -> new IllegalArgumentException("Architect not found"));
 
-            // Create a new calendar entry
             Calendar calendar = new Calendar();
             calendar.setDate(LocalDate.parse(templateDto.getDate()));
             calendar.setTime(LocalTime.parse(templateDto.getTime()));
             calendar.setStatus(CalendarStatus.NOT_AVAILABLE);
             calendarRepository.save(calendar);
 
-            // Create the reservation
+            UsersDream usersDream = new UsersDream();
+            usersDream.setDream(originalTemplate);
+            usersDreamRepository.save(usersDream);
+
             Reservation reservation = new Reservation();
             reservation.setTimeOfReservation(ZonedDateTime.parse(templateDto.getTimeOfReservation()));
             reservation.setStatus(ReservationStatus.CONFIRMED);
-            reservation.setDream(originalTemplate); // Associate the original template
+            reservation.setDream(originalTemplate);
             reservation.setUser(creator);
             reservation.setCalendar(calendar);
             reservation.setArchitect(architect);
@@ -216,7 +216,6 @@ public class ReservationService {
             // Retrieve reservations by architect id
             reservations = reservationRepository.findReservationsByArchitectId(architect.getId());
         } else {
-            // Otherwise, retrieve reservations by user id
             reservations = reservationRepository.findReservationsByUserId(creator.getId());
         }
 
@@ -239,4 +238,33 @@ public class ReservationService {
     }
 
 
+    @Transactional
+    public List<Calendar> getCalendarEntries(String date, String time, String calendarStatus) {
+        LocalDate parsedDate = LocalDate.parse(date);
+        LocalTime parsedTime = LocalTime.parse(time);
+
+        if (calendarStatus != null) {
+            CalendarStatus status = CalendarStatus.valueOf(calendarStatus);
+            return calendarRepository.findByDateAndTimeAndStatus(parsedDate, parsedTime, status);
+        } else {
+            return calendarRepository.findByDateAndTime(parsedDate, parsedTime);
+        }
+    }
+
+    @Transactional
+    public Reservation updateReservationStatus(Long reservationId) {
+        Reservation reservation = reservationRepository.findById(reservationId)
+                .orElseThrow(() -> new IllegalArgumentException("Dream not found"));
+
+        reservation.setStatus(ReservationStatus.DONE);
+        return reservationRepository.save(reservation);
+    }
+
+    @Transactional
+    public void updateResStatus(Long reservationId, ReservationStatus status) {
+        Reservation reservation = reservationRepository.findById(reservationId)
+                .orElseThrow(() -> new NoResultException("Reservation not found"));
+        reservation.setStatus(status);
+        reservationRepository.save(reservation);
+    }
 }

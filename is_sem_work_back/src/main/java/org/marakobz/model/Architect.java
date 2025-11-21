@@ -1,7 +1,10 @@
 package org.marakobz.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.marakobz.enums.AdminStatus;
 
 @Data
 @Entity
@@ -14,6 +17,7 @@ public class Architect {
 
     @ManyToOne
     @JoinColumn(name = "users_id", referencedColumnName = "id")
+    @JsonBackReference("architect-dream_user")
     private DreamUser user;
 
     @Column(name = "price", nullable = false)
@@ -22,5 +26,8 @@ public class Architect {
     @Column(name = "rating")
     private int rating;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = false)
+    private AdminStatus status;
 
 }
