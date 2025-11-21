@@ -6,10 +6,17 @@ function HomePage() {
     const [reservations, setReservations] = useState([]);
     const [userName, setUserName] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isReviewModalOpen, setIsReviewModalOpen] = useState(false); // Новый стейт для модального окна отзывов
+    const [selectedArchitect, setSelectedArchitect] = useState('');
+    const [selectedRating, setSelectedRating] = useState(1);
     const navigate = useNavigate();
     const [isCharacterModalOpen, setIsCharacterModalOpen] = useState(false);
     const [selectedCharacters, setSelectedCharacters] = useState([]);
     const token = localStorage.getItem('token');
+    const [selectedUsersDreamsId, setSelectedUsersDreamId] = useState(null);
+    const [reviews, setReviews] = useState([]);
+    const [selectedRatings, setSelectedRatings] = useState({});
+
 
     useEffect(() => {
         if (!token) {
@@ -31,8 +38,62 @@ function HomePage() {
     };
 
     const handleLeaveReview = () => {
-        navigate('/leave-review');
+        setIsReviewModalOpen(true); // Открытие модального окна для оставления отзыва
     };
+
+    const handleCloseReviewModal = () => {
+        setIsReviewModalOpen(false);
+    };
+
+    const handleRatingChange = (reservationId, newRating) => {
+        setSelectedRatings(prevRatings => ({
+            ...prevRatings,
+            [reservationId]: newRating, // Сохраняем рейтинг для конкретного бронирования
+        }));
+    };
+
+
+    const handleSubmitReview = async () => {
+        if (!selectedUsersDreamsId) {
+            alert("Пожалуйста, выберите сон для отзыва.");
+            return;
+        }
+
+        // Находим reservationId для выбранного usersDreamsId
+        const selectedReservation = reservations.find(reservation => reservation.usersDreamsId === selectedUsersDreamsId);
+        if (!selectedReservation) {
+            alert("Выбранный сон не найден.");
+            return;
+        }
+
+        const reviewData = {
+            architectId: selectedArchitect,
+            mark: selectedRatings[selectedReservation.reservationId] || 1, // Используем reservationId для получения оценки
+            usersDreamsId: selectedUsersDreamsId,
+        };
+
+        try {
+            const response = await fetch('http://localhost:8080/api/dreams/reviews', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify(reviewData),
+            });
+
+            if (response.ok) {
+                console.info('Отзыв успешно оставлен!');
+                setIsReviewModalOpen(false);
+            } else {
+                console.error('Ошибка при отправке отзыва');
+                console.log('Review data:', reviewData);
+            }
+        } catch (error) {
+            console.error('Ошибка при отправке отзыва:', error);
+        }
+    };
+
 
     const handleCreateOwnDream = () => {
         setIsModalOpen(false);
@@ -81,6 +142,7 @@ function HomePage() {
                 if (response.ok) {
                     const data = await response.json();
                     setReservations(data);
+
                 } else {
                     console.error('Failed to fetch reservations');
                 }
@@ -92,6 +154,13 @@ function HomePage() {
         fetchReservations();
     }, [token]);
 
+    useEffect(() => {
+        if (selectedArchitect && selectedUsersDreamsId) {
+            console.log("Selected Architect:", selectedArchitect);
+            console.log("Selected UsersDreams ID:", selectedUsersDreamsId);
+        }
+    }, [selectedArchitect, selectedUsersDreamsId]);
+
     return (
         <div className="home-container">
             <div className="header">
@@ -101,6 +170,7 @@ function HomePage() {
 
             <div className="main-content">
                 <button onClick={handleCreateReservation} className="action-button">Создать бронь</button>
+
 
                 <div className="leave-review">
                     <button className="action-button" onClick={handleLeaveReview}>Оставить отзыв</button>
@@ -206,6 +276,59 @@ function HomePage() {
                             <p>Нет персонажей</p>
                         )}
                         <button onClick={handleCloseCharacterModal} className="close-modal-button">Закрыть</button>
+                    </div>
+                </div>
+            )}
+
+            {isReviewModalOpen && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <h2>Оставить отзыв</h2>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Архитектор</th>
+                                <th>Название сна</th>
+                                <th>Рейтинг</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {reservations.map((reservation) => (
+                                <tr key={reservation.reservationId}>
+                                    <td>{reservation.architectUsername}</td>
+                                    <td>{reservation.dreamName}</td>
+                                    <td>
+                                        <select
+                                            value={selectedRatings[reservation.reservationId] || 1}
+                                            onChange={(e) => handleRatingChange(reservation.reservationId, e.target.value)}
+                                        >
+                                            {[1, 2, 3, 4, 5].map((mark) => (
+                                                <option key={mark} value={mark}>
+                                                    {mark}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <button
+                                            onClick={() => {
+                                                console.log("Architect ID:", reservation.architectId);
+                                                console.log("UsersDreams ID:", reservation.usersDreamsId);
+                                                setSelectedArchitect(reservation.architectId);
+                                                setSelectedUsersDreamId(reservation.usersDreamsId);
+                                            }}
+                                            className="action-button"
+                                        >
+                                            Выбрать
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+
+                            </tbody>
+                        </table>
+                        <button onClick={handleSubmitReview}>Отправить отзыв</button>
+                        <button onClick={handleCloseReviewModal}>Закрыть</button>
                     </div>
                 </div>
             )}

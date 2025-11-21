@@ -45,13 +45,14 @@ function SelectArchitectPage() {
             localStorage.setItem('selectedArchitect', JSON.stringify({
                 architectId: selectedArchitect.architectId,
                 username: selectedArchitect.username,
-                price: selectedArchitect.price
+                price: selectedArchitect.price,
+                rating: selectedArchitect.rating
             }));
 
             // Save the selected dreamId in localStorage
             localStorage.setItem('selectedDreamId', dreamId);
 
-            console.log(`Architect details saved: ${selectedArchitect.username}, Price: ${selectedArchitect.price}`);
+            console.log(`Architect details saved: ${selectedArchitect.username}, Price: ${selectedArchitect.price}, ${selectedArchitect.rating}`);
             navigate(`/dreams/select-datetime/${dreamId}`); // Navigate to the next page
         } else {
             console.error('No architect selected');

@@ -11,6 +11,7 @@ import SelectArchitectPage from "./users_pages/SelectArchitectPage/SelectArchite
 import SelectDateTimePage from "./users_pages/SelectDateTimePage/SelectDateTimePage";
 import ReservationPage from "./users_pages/ReservationPage/ReservationPage";
 import ConfirmReservationPage from "./users_pages/ConfirmReservationPage/ConfirmReservationPage";
+import AdminPage from "./users_pages/AdminPage/AdminPage";
 
 function App() {
     const [token, setToken] = useState(null);
@@ -40,6 +41,9 @@ function App() {
                     {/* Architect Pages */}
                     <Route path="/dreams/architect-page" element={<ArchitectPage />} />
                     <Route path="/dreams/architect-page/create-template" element={<CreationTemplatesPage />} />
+
+                    {/* Admin Pages */}
+                    <Route path="/dreams/admin-page" element={<AdminPage />} />
 
                     {/* Dream Workflow Routes with dreamId */}
                     <Route path="/dreams/select-architect/:dreamId" element={<SelectArchitectPage />} />

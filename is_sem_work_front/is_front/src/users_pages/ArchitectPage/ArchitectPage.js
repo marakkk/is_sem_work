@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './ArchitectPage.css';
 
 function ArchitectPage() {
-    const [requests, setRequests] = useState([]);
-    const [ratings, setRatings] = useState([]);
+    const [architects, setRatings] = useState([]);
     const [newPrice, setNewPrice] = useState('');
     const [selectedDreamId, setSelectedDreamId] = useState(null);
     const [history, setHistory] = useState([]); // State for architect's work history
@@ -19,7 +18,7 @@ function ArchitectPage() {
 
     const fetchHistory = async () => {
         try {
-            const response = await fetch('http://localhost:8080/api/reservations/history', {
+            const response = await fetch(`http://localhost:8080/api/reservations/history`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -36,28 +35,9 @@ function ArchitectPage() {
         }
     };
 
-    const fetchRequests = async () => {
-        try {
-            const response = await fetch('/api/dreams/architect/requests', {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                setRequests(data);
-            } else {
-                console.error('Не удалось загрузить запросы на создание снов.');
-            }
-        } catch (error) {
-            console.error('Ошибка при загрузке запросов:', error);
-        }
-    };
-
     const fetchRatings = async () => {
         try {
-            const response = await fetch('/api/dreams/architect/ratings', {
+            const response = await fetch(`http://localhost:8080/api/dreams/architect/ratings`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -77,7 +57,7 @@ function ArchitectPage() {
     const handlePriceChange = async () => {
         if (selectedDreamId && newPrice) {
             try {
-                const response = await fetch(`/api/dreams/architect/update-price/${selectedDreamId}`, {
+                const response = await fetch(`http://localhost:8080/api/dreams/architect/update-price/${selectedDreamId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -109,9 +89,25 @@ function ArchitectPage() {
 
     useEffect(() => {
         fetchHistory();
-        fetchRequests();
         fetchRatings();
-    }, []); // Fetch data on component mount
+    }, []);
+
+    const handleChangeStatus = async (reservationId) => {
+        const response = await fetch(`http://localhost:8080/api/reservations/update-status/${reservationId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({ status: 'DONE' }),
+        });
+
+        if (response.ok) {
+            const updatedItem = await response.json();
+            console.log('Статус обновлен:', updatedItem);
+            fetchHistory();
+        }
+    };
 
     return (
         <div className="home-container">
@@ -123,15 +119,6 @@ function ArchitectPage() {
             </div>
 
             <div className="left-column">
-                <h2>Запросы на создание снов</h2>
-                <div className="reservations-list">
-                    {requests.map((request) => (
-                        <div key={request.dreamId}>
-                            <p>{request.name}</p>
-                            <p>Цена: {request.price}</p>
-                        </div>
-                    ))}
-                </div>
                 <button className="action-button" onClick={handleCreateTemplate}>
                     Создать новый шаблон
                 </button>
@@ -140,10 +127,9 @@ function ArchitectPage() {
             <div className="right-column">
                 <h2>Рейтинг снов</h2>
                 <div className="reservations-list">
-                    {ratings.map((rating) => (
-                        <div key={rating.dreamId}>
-                            <p>{rating.name}</p>
-                            <p>Рейтинг: {rating.rating}</p>
+                    {architects.map((architect) => (
+                        <div key={architect.dreamId} className="rating-item">
+                            <p>Рейтинг: {architect.rating}</p>
                         </div>
                     ))}
                 </div>
@@ -161,7 +147,6 @@ function ArchitectPage() {
                     </button>
                 </div>
 
-                {/* History Table */}
                 <h3>История работы архитектора</h3>
                 <div className="history-table-container">
                     {history.length > 0 ? (
@@ -172,15 +157,23 @@ function ArchitectPage() {
                                 <th>Дата</th>
                                 <th>Цена</th>
                                 <th>Статус</th>
+                                <th> </th>
                             </tr>
                             </thead>
                             <tbody>
                             {history.map((item) => (
-                                <tr key={item.dreamId}>
+                                <tr key={item.reservationId}>
                                     <td>{item.dreamName}</td>
                                     <td>{item.date}</td>
                                     <td>{item.price}</td>
                                     <td>{item.status}</td>
+                                    <td>
+                                        {item.status !== 'Выполнено' && (
+                                            <button className="status-button" onClick={() => handleChangeStatus(item.reservationId)}>
+                                                Изменить на DONE
+                                            </button>
+                                        )}
+                                    </td>
                                 </tr>
                             ))}
                             </tbody>

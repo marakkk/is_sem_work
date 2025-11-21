@@ -10,31 +10,60 @@ function LoginForm({ onLogin }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:8080/api/auth/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password }),
-        });
+        try {
+            const response = await fetch('http://localhost:8080/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password }),
+            });
 
-        if (response.ok) {
-            const data = await response.json();
-            const { token, role } = data;
+            if (response.ok) {
+                const data = await response.json();
+                const { token, role } = data;
 
-            localStorage.setItem('token', token);
-            localStorage.setItem('username', username);
-            localStorage.setItem('role', role);
+                // Skip status check for CUSTOMER role
+                if (role === 'ADMIN' || role === 'ARCHITECT') {
+                    const statusResponse = await fetch(`http://localhost:8080/api/auth/status?username=${username}`, {
+                        method: 'GET',
+                        headers: { 'Authorization': `Bearer ${token}` },
+                    });
 
-            onLogin(token);
+                    if (statusResponse.ok) {
+                        const statusData = await statusResponse.json();
+                        const { status } = statusData;
 
-            if (role === 'ADMIN') {
-                navigate('/dreams/admin-page');
-            } else if (role === 'CUSTOMER') {
-                navigate('/dreams/home-page');
-            } else if (role === 'ARCHITECT'){
-                navigate('/dreams/architect-page');
+                        if (status !== 'APPROVED') {
+                            setErrorMessage('Your account is not approved yet.');
+                            return;
+                        }
+                    } else {
+                        setErrorMessage('Failed to fetch user status.');
+                        return;
+                    }
+                }
+
+                // Save token, username, and role to localStorage
+                localStorage.setItem('token', token);
+                localStorage.setItem('username', username);
+                localStorage.setItem('role', role);
+
+                // Call the onLogin callback
+                onLogin(token);
+
+                // Redirect based on role
+                if (role === 'ADMIN') {
+                    navigate('/dreams/admin-page');
+                } else if (role === 'CUSTOMER') {
+                    navigate('/dreams/home-page');
+                } else if (role === 'ARCHITECT') {
+                    navigate('/dreams/architect-page');
+                }
+            } else {
+                setErrorMessage('Не удалось войти. Проверьте логин и пароль.');
             }
-        } else {
-            setErrorMessage('Не удалось войти. Проверьте логин и пароль.');
+        } catch (error) {
+            console.error('Error during login:', error);
+            setErrorMessage('An error occurred. Please try again.');
         }
     };
 

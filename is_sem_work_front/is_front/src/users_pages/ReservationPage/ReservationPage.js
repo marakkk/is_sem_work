@@ -4,6 +4,8 @@ import './ReservationPage.css';
 
 function ReservationPage() {
     const [reservationDetails, setReservationDetails] = useState(null);
+    const [isCollective, setIsCollective] = useState(null); // Track if dream is collective
+    const [collectivePartnerId, setCollectivePartnerId] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -30,7 +32,7 @@ function ReservationPage() {
                     ? {
                         username: dream.architectName,
                         price: dream.architectPrice,
-                        rating: dream.architectRating,
+                        rating: dream.architect.rating,
                     }
                     : storedArchitect;
 
@@ -61,11 +63,11 @@ function ReservationPage() {
     const handleReserve = async () => {
         try {
             const token = localStorage.getItem('token');
-            const { dream, architect, date, time } = reservationDetails;
+            const { dream, architect, date, time} = reservationDetails;
 
             let response;
 
-            if (dream.template) {
+            if (dream.template === true) {
                 // Payload for template-based dreams
                 const templateReservationPayload = {
                     originalTemplateId: dream.originalTemplateId,
@@ -73,6 +75,7 @@ function ReservationPage() {
                     date: date,
                     time: time,
                     timeOfReservation: new Date().toISOString(),
+
                 };
 
                 response = await fetch('http://localhost:8080/api/reservations/confirm-template', {
@@ -84,7 +87,6 @@ function ReservationPage() {
                     body: JSON.stringify(templateReservationPayload),
                 });
             } else {
-                // Standard payload for non-template dreams
                 const reservationPayload = {
                     dreamName: dream.name,
                     timeEra: dream.timeEra,
@@ -108,6 +110,8 @@ function ReservationPage() {
                     date: date,
                     time: time,
                     timeOfReservation: new Date().toISOString(),
+                    collectivePartner: isCollective ? collectivePartnerId : null,
+
                 };
 
                 response = await fetch('http://localhost:8080/api/reservations/confirm', {
@@ -119,6 +123,7 @@ function ReservationPage() {
                     body: JSON.stringify(reservationPayload),
                 });
             }
+            console.info(reservationDetails)
 
             if (!response.ok) {
                 const errorData = await response.json().catch(() => null);
@@ -148,7 +153,7 @@ function ReservationPage() {
         return <p>Loading reservation details...</p>;
     }
 
-    const { dream, architect, date, time } = reservationDetails;
+    const { dream, architect, date, time} = reservationDetails;
 
     return (
         <div className="reservation-page">
@@ -195,6 +200,29 @@ function ReservationPage() {
                     <p><strong>Дата:</strong> {date}</p>
                     <p><strong>Время:</strong> {time}</p>
                 </div>
+            </div>
+
+            <div className="collective-option">
+                <h3>Вы хотите сделать сон коллективным?</h3>
+                <button onClick={() => setIsCollective(true)} className={isCollective === true ? 'selected' : ''}>
+                    Да
+                </button>
+                <button onClick={() => setIsCollective(false)} className={isCollective === false ? 'selected' : ''}>
+                    Нет
+                </button>
+                {isCollective && (
+                    <div className="collective-input">
+                        <label>
+                            <strong>ID пользователя партнера:</strong>
+                            <input
+                                type="text"
+                                value={collectivePartnerId}
+                                onChange={(e) => setCollectivePartnerId(e.target.value)}
+                                placeholder="Введите ID пользователя"
+                            />
+                        </label>
+                    </div>
+                )}
             </div>
 
             <div className="reservation-buttons">
