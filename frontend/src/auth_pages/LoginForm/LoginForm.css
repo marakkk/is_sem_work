@@ -1,0 +1,117 @@
+/* Фон всей страницы */
+body {
+  margin: 0; /* Убираем отступы по умолчанию */
+  padding: 0;
+  background: url('fonwall.ru-galaxy-sky-atmosphere-purple.jpeg') no-repeat center center fixed; /* Фон для всей страницы */
+  background-size: cover; /* Масштабирование для покрытия всей страницы */
+  height: 100vh; /* Задаём высоту всей страницы */
+  font-family: 'Arial', sans-serif; /* Шрифт для всей страницы */
+}
+
+/* Общий контейнер */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  font-family: 'Arial', sans-serif;
+  min-height: calc(100vh - 100px);
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+}
+
+/* Заголовок сервиса */
+.welcome-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin-top: 100px;
+  width: 100%;
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+
+.welcome-header h2 {
+  margin: 0;
+  color: #f0f4ff;
+  letter-spacing: 1px;
+}
+
+/* Стили для формы */
+.login-form {
+  max-width: 500px; /* Увеличение ширины формы */
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px; /* Увеличенный padding */
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #5a60a3; /* Фиолетовый цвет акцента */
+  outline: none;
+  box-shadow: 0 0 5px rgba(90, 96, 163, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: rgba(29, 36, 74, 0.5);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(90, 96, 163, 0.3); /* Тень для глубины */
+}
+
+button:hover {
+  background: rgba(48, 55, 101, 0.69);
+  box-shadow: 0 6px 12px rgba(71, 79, 145, 0.5);
+  transform: translateY(-2px); /* Плавный эффект подъема */
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(71, 79, 145, 0.3);
+}
+
+.error-message {
+  color: #e74c3c; /* Красный цвет ошибки */
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.account-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.account-message a {
+  color: #5a60a3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.account-message a:hover {
+  text-decoration: underline;
+}
