@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './RegistrationForm.css';
 
 function RegisterForm() {
@@ -25,12 +25,12 @@ function RegisterForm() {
             return;
         }
 
-        const userData = { username, password, role };
+        const userData = {username, password, role};
 
         try {
             const response = await fetch('http://localhost:8080/api/auth/register', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(userData),
             });
 

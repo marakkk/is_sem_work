@@ -1,7 +1,6 @@
 package com.coursework.dto;
 
 import lombok.Data;
-
 import java.util.List;
 
 @Data

@@ -11,22 +11,18 @@ import com.coursework.model.Admin;
 import com.coursework.model.Architect;
 import com.coursework.repository.AdminRepository;
 import com.coursework.repository.ArchitectureRepository;
-import com.coursework.repository.ReservationRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
+@AllArgsConstructor
 @Service
 public class AdminService {
 
     private final ArchitectureRepository architectureRepository;
-    private final AdminRepository adminRepository;
 
-    public AdminService(ArchitectureRepository architectureRepository, AdminRepository adminRepository, ReservationRepository reservationRepository) {
-        this.architectureRepository = architectureRepository;
-        this.adminRepository = adminRepository;
-    }
+    private final AdminRepository adminRepository;
 
     public List<ArchitectRequestDto> getArchitectRequests() {
         List<Architect> architects = architectureRepository.findByStatus(AdminStatus.REQUESTED);
@@ -57,6 +53,5 @@ public class AdminService {
         admin.setStatus(status);
         adminRepository.save(admin);
     }
-
 
 }

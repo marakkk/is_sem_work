@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import './CreationTemplatesPage.css';
 
 function CreationTemplatesPage() {
@@ -59,7 +59,7 @@ function CreationTemplatesPage() {
     };
 
     const handleAddCharacter = () => {
-        const { name, characteristics, appearance, relation, occupation } = newCharacter;
+        const {name, characteristics, appearance, relation, occupation} = newCharacter;
         if (!name || !characteristics || !appearance || !relation || !occupation) {
             setErrorMessage('Заполните все поля персонажа.');
             return;
@@ -67,7 +67,7 @@ function CreationTemplatesPage() {
 
         setFormData(prev => ({
             ...prev,
-            selectedCharacters: [...prev.selectedCharacters, { ...newCharacter }],
+            selectedCharacters: [...prev.selectedCharacters, {...newCharacter}],
         }));
 
         setNewCharacter({
@@ -96,7 +96,7 @@ function CreationTemplatesPage() {
 
     const validateForm = () => {
         const errors = {};
-        const { name, timeEra, virtualEnvironment, role, genre, price, selectedCharacters } = formData;
+        const {name, timeEra, virtualEnvironment, role, genre, price, selectedCharacters} = formData;
 
         if (!name) errors.name = 'Введите название шаблона.';
         if (!timeEra) errors.timeEra = 'Выберите эру времени.';
@@ -116,7 +116,7 @@ function CreationTemplatesPage() {
         if (!validateForm()) return;
 
         const token = localStorage.getItem('token');
-        const { selectedCharacters, ...otherFields } = formData;
+        const {selectedCharacters, ...otherFields} = formData;
 
         const templateData = {
             ...otherFields,

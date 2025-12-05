@@ -3,7 +3,6 @@ package com.coursework.dto;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.List;
 
 @Getter
@@ -18,15 +17,11 @@ public class DreamDto {
     private String role;
     private String scenario;
 
-
     @Getter
     @Setter
     private boolean template;
-
     private String genre;
     private Integer price;
     private Long architectId;
     private List<CharactersDto> characters;
-
-
 }

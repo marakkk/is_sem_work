@@ -3,7 +3,6 @@ package com.coursework.dto;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.List;
 
 @Getter
@@ -19,12 +18,12 @@ public class ReservationDto {
     private String role;
     private String genre;
     private String scenario;
+
     @Getter
     @Setter
     private boolean template;
     private double price;
     private List<CharactersDto> characters;
-
     private Long architectId;
     private Long usersDreamsId;
     private double architectPrice;

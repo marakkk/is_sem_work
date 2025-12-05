@@ -2,7 +2,6 @@ package com.coursework.model;
 
 import com.coursework.enums.*;
 import jakarta.persistence.*;
-
 import java.util.Set;
 import lombok.Data;
 

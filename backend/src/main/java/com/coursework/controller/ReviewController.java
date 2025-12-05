@@ -1,8 +1,8 @@
 package com.coursework.controller;
 
-
 import com.coursework.dto.ReviewDto;
 import com.coursework.service.ReviewService;
+import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -12,17 +12,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/dreams")
 public class ReviewController {
 
-    private ReviewService reviewService;
+    private final ReviewService reviewService;
 
     private static final Logger logger = LoggerFactory.getLogger(ReviewController.class);
 
-    public ReviewController(ReviewService reviewService) {
-        this.reviewService = reviewService;
-    }
 
     @PostMapping("/reviews")
     public ResponseEntity<Object> submitReview(@RequestBody ReviewDto reviewDto) {

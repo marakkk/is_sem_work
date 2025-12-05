@@ -30,7 +30,6 @@ public class JWTUtil {
         return extractClaim(token, Claims::getSubject);
     }
 
-
     public static String extractUsernameFromRequest(HttpServletRequest request) {
         String authHeader = request.getHeader("Authorization");
         if (authHeader != null && authHeader.startsWith("Bearer")) {
@@ -39,6 +38,7 @@ public class JWTUtil {
         }
         return null;
     }
+
     public boolean isTokenValid(String token, UserDetails userDetails) {
         String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));

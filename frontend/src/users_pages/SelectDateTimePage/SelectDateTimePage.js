@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React, {useState} from 'react';
+import {useNavigate, useParams} from 'react-router-dom';
 import './SelectDateTimePage.css';
 
 function SelectDateTimePage() {
-    const { dreamId } = useParams();
+    const {dreamId} = useParams();
     const [selectedDate, setSelectedDate] = useState('');
     const [selectedTime, setSelectedTime] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -15,7 +15,6 @@ function SelectDateTimePage() {
         today.setHours(0, 0, 0, 0);
 
         const selectedDateObj = new Date(selectedDate);
-
 
         const dayOfWeek = selectedDateObj.getUTCDay();
         if (dayOfWeek === 6 || dayOfWeek === 0) {
@@ -37,22 +36,20 @@ function SelectDateTimePage() {
         return true;
     };
 
-
     const handleConfirmDateTime = async () => {
         if (selectedDate && selectedTime && validateDateTime()) {
 
-                const reservationDetails = {
-                    dreamId,
-                    date: selectedDate,
-                    time: selectedTime,
-                };
+            const reservationDetails = {
+                dreamId,
+                date: selectedDate,
+                time: selectedTime,
+            };
 
-                localStorage.setItem('reservationDetails', JSON.stringify(reservationDetails));
-                console.log('Reservation Details:', reservationDetails);
+            localStorage.setItem('reservationDetails', JSON.stringify(reservationDetails));
+            console.log('Reservation Details:', reservationDetails);
 
-                navigate(`/dreams/confirm-selection/${dreamId}`);
-            }
-        else {
+            navigate(`/dreams/confirm-selection/${dreamId}`);
+        } else {
             console.error('Date and Time must be selected');
         }
     };

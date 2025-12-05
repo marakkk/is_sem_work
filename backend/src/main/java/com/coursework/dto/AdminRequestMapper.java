@@ -1,9 +1,9 @@
 package com.coursework.dto;
 
+import com.coursework.model.Admin;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
-import com.coursework.model.Admin;
 
 @Mapper
 public interface AdminRequestMapper {

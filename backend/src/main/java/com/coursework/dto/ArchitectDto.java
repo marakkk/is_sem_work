@@ -10,5 +10,4 @@ public class ArchitectDto {
     private String username;
     private Integer price;
     private Integer rating;
-
 }

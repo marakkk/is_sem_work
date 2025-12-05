@@ -35,17 +35,6 @@ public class DreamUser implements UserDetails {
     @Column(name = "role", nullable = false)
     private Roles role;
 
-
-
-
-//    @ManyToMany
-//    @JoinTable(
-//            name = "users_dreams",
-//            joinColumns = @JoinColumn(name = "users_id"),
-//            inverseJoinColumns = @JoinColumn(name = "dream_id")
-//    )
-//    private Set<Dream> dreams;
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of();

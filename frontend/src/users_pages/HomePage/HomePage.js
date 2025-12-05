@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import './HomePage.css';
 
 function HomePage() {
     const [reservations, setReservations] = useState([]);
     const [userName, setUserName] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isReviewModalOpen, setIsReviewModalOpen] = useState(false); // Новый стейт для модального окна отзывов
+    const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
     const [selectedArchitect, setSelectedArchitect] = useState('');
     const [selectedRating, setSelectedRating] = useState(1);
     const navigate = useNavigate();
@@ -24,7 +24,7 @@ function HomePage() {
         } else {
             const payload = token.split('.')[1];
             const decodedPayload = JSON.parse(atob(payload));
-            setUserName(decodedPayload.username); // Assuming the username is stored in the JWT payload
+            setUserName(decodedPayload.username);
         }
     }, [token, navigate]);
 
@@ -38,7 +38,7 @@ function HomePage() {
     };
 
     const handleLeaveReview = () => {
-        setIsReviewModalOpen(true); // Открытие модального окна для оставления отзыва
+        setIsReviewModalOpen(true);
     };
 
     const handleCloseReviewModal = () => {
@@ -48,10 +48,9 @@ function HomePage() {
     const handleRatingChange = (reservationId, newRating) => {
         setSelectedRatings(prevRatings => ({
             ...prevRatings,
-            [reservationId]: newRating, // Сохраняем рейтинг для конкретного бронирования
+            [reservationId]: newRating,
         }));
     };
-
 
     const handleSubmitReview = async () => {
         if (!selectedUsersDreamsId) {
@@ -59,7 +58,6 @@ function HomePage() {
             return;
         }
 
-        // Находим reservationId для выбранного usersDreamsId
         const selectedReservation = reservations.find(reservation => reservation.usersDreamsId === selectedUsersDreamsId);
         if (!selectedReservation) {
             alert("Выбранный сон не найден.");
@@ -68,7 +66,7 @@ function HomePage() {
 
         const reviewData = {
             architectId: selectedArchitect,
-            mark: selectedRatings[selectedReservation.reservationId] || 1, // Используем reservationId для получения оценки
+            mark: selectedRatings[selectedReservation.reservationId] || 1,
             usersDreamsId: selectedUsersDreamsId,
         };
 
@@ -93,7 +91,6 @@ function HomePage() {
             console.error('Ошибка при отправке отзыва:', error);
         }
     };
-
 
     const handleCreateOwnDream = () => {
         setIsModalOpen(false);

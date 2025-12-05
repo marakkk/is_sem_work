@@ -3,24 +3,25 @@ package com.coursework.dto;
 import com.coursework.model.Reservation;
 import com.coursework.model.UsersDream;
 import com.coursework.repository.UsersDreamRepository;
+import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
 import java.util.Optional;
 
+@AllArgsConstructor
 @Component
 public class ReservationDetailsMapper {
 
     private final DreamMapper dreamMapper;
+
     private final ArchitectMapper architectMapper;
+
     private final CalendarMapper calendarMapper;
+
     private final UsersDreamRepository usersDreamRepository;
 
-    public ReservationDetailsMapper(DreamMapper dreamMapper, ArchitectMapper architectMapper, CalendarMapper calendarMapper, UsersDreamRepository usersDreamRepository) {
-        this.dreamMapper = dreamMapper;
-        this.architectMapper = architectMapper;
-        this.calendarMapper = calendarMapper;
-        this.usersDreamRepository = usersDreamRepository;
-    }
+    private static final Logger logger = LoggerFactory.getLogger(ReservationDetailsMapper.class);
 
     public ReservationDetailsDto toDetailsDto(Reservation reservation) {
         if (reservation == null) {
@@ -35,10 +36,11 @@ public class ReservationDetailsMapper {
 
         Long usersDreamsId = null;
         Optional<UsersDream> usersDream = usersDreamRepository.findByDream(reservation.getDream());
-            if (usersDream.isPresent()) {
-                usersDreamsId = usersDream.get().getUsersDreamsId();
-            }
-        System.out.println("usersDreamsId: " + usersDreamsId);
+        if (usersDream.isPresent()) {
+            usersDreamsId = usersDream.get().getUsersDreamsId();
+        }
+
+        logger.info("usersDreamsId: {}", usersDreamsId);
 
 
         ReservationDetailsDto dto = new ReservationDetailsDto(

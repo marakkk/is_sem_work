@@ -4,13 +4,12 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
 
 @Getter
 @Setter
 @Data
 public class DreamTemplateDto {
-    private Long id;  // Add the id field here
+    private Long id;
     private String name;
     private String timeEra;
     private String virtualEnvironment;
@@ -22,7 +21,7 @@ public class DreamTemplateDto {
     private Integer price;
     private Long architectId;
     private boolean template;
-    private String architectName;  // New field
-    private Integer architectRating;  // New field
+    private String architectName;
+    private Integer architectRating;
     private Integer architectPrice;
 }

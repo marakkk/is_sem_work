@@ -1,5 +1,6 @@
 package com.coursework.controller;
 
+import com.coursework.model.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
@@ -10,7 +11,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-
 
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<Object> handleResponseStatusException(ResponseStatusException ex) {
@@ -36,22 +36,4 @@ public class GlobalExceptionHandler {
                 .body(new ErrorResponse("An unexpected error occurred", HttpStatus.INTERNAL_SERVER_ERROR.value()));
     }
 
-    // Error Response Class
-    public static class ErrorResponse {
-        private String message;
-        private int status;
-
-        public ErrorResponse(String message, int status) {
-            this.message = message;
-            this.status = status;
-        }
-
-        public String getMessage() {
-            return message;
-        }
-
-        public int getStatus() {
-            return status;
-        }
-        }
 }

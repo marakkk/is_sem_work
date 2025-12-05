@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import './ReservationPage.css';
 
 function ReservationPage() {
     const [reservationDetails, setReservationDetails] = useState(null);
-    const [isCollective, setIsCollective] = useState(null); // Track if dream is collective
+    const [isCollective, setIsCollective] = useState(null);
     const [collectivePartnerId, setCollectivePartnerId] = useState('');
     const navigate = useNavigate();
 
@@ -22,7 +22,6 @@ function ReservationPage() {
             const dream = storedDreams.find(d => d.id === storedReservation.dreamId);
 
             if (dream) {
-                // Ensure the template field is set correctly
                 if (dream.template === undefined) {
                     console.warn('Template field is undefined. Setting it to false.');
                     dream.template = true;
@@ -43,32 +42,30 @@ function ReservationPage() {
                 });
             } else {
                 console.error('Dream not found for reservation.');
-                navigate('/'); // Navigate back if dream is not found
+                navigate('/');
             }
         } else {
             console.error('Missing reservation details or architect');
-            navigate('/'); // Navigate back if details are missing
+            navigate('/');
         }
     }, [navigate]);
-
 
 
     const handleCancel = () => {
         localStorage.removeItem('reservationDetails');
         localStorage.removeItem('selectedArchitectId');
         localStorage.removeItem('selectedDreamId');
-        navigate('/dreams/home-page'); // Navigate back to home or previous page
+        navigate('/dreams/home-page');
     };
 
     const handleReserve = async () => {
         try {
             const token = localStorage.getItem('token');
-            const { dream, architect, date, time} = reservationDetails;
+            const {dream, architect, date, time} = reservationDetails;
 
             let response;
 
             if (dream.template === true) {
-                // Payload for template-based dreams
                 const templateReservationPayload = {
                     originalTemplateId: dream.originalTemplateId,
                     architectId: dream.architectId,
@@ -135,12 +132,10 @@ function ReservationPage() {
 
             console.log('Reservation successful!');
 
-            // Cleanup after successful reservation
             localStorage.removeItem('reservationDetails');
             localStorage.removeItem('selectedArchitectId');
             localStorage.removeItem('selectedDreamId');
 
-            // Navigate to success page after reservation is confirmed
             navigate('/dreams/success');
 
         } catch (error) {
@@ -153,7 +148,7 @@ function ReservationPage() {
         return <p>Loading reservation details...</p>;
     }
 
-    const { dream, architect, date, time} = reservationDetails;
+    const {dream, architect, date, time} = reservationDetails;
 
     return (
         <div className="reservation-page">

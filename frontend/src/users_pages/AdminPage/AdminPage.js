@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import './AdminPage.css';
 
 function AdminPage() {
@@ -116,11 +116,11 @@ function AdminPage() {
     };
 
     const handleEditReservation = (reservation) => {
-        setEditingReservation(reservation); // Set the reservation to be edited
-        setSelectedDate(reservation.date); // Pre-fill the date
-        setSelectedTime(reservation.time); // Pre-fill the time
-        setSelectedArchitectId(reservation.architectId); // Pre-fill the architect
-        setSelectedPrice(reservation.price); // Pre-fill the price
+        setEditingReservation(reservation);
+        setSelectedDate(reservation.date);
+        setSelectedTime(reservation.time);
+        setSelectedArchitectId(reservation.architectId);
+        setSelectedPrice(reservation.price);
     };
 
     const handleSaveReservation = async () => {
@@ -143,15 +143,15 @@ function AdminPage() {
         });
 
         if (response.ok) {
-            fetchReservations(); // Refresh the list
-            setEditingReservation(null); // Close the edit form
+            fetchReservations();
+            setEditingReservation(null);
         } else {
             console.error('Failed to update reservation');
         }
     };
 
     const handleCancelEdit = () => {
-        setEditingReservation(null); // Close the edit form
+        setEditingReservation(null);
     };
 
     const handleLogout = () => {
@@ -169,7 +169,6 @@ function AdminPage() {
             });
 
             if (response.ok) {
-                // Refresh the reservations list after deletion
                 fetchReservations();
             } else {
                 console.error('Failed to delete reservation');
@@ -183,11 +182,11 @@ function AdminPage() {
         const response = await fetch(`http://localhost:8080/api/admin/approve-architect/${id}`, {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${token}`, // Include the token in the headers
+                'Authorization': `Bearer ${token}`,
             },
         });
         if (response.ok) {
-            fetchArchitectRequests(); // Refresh the list
+            fetchArchitectRequests();
         } else {
             console.error('Failed to approve architect');
         }
@@ -197,11 +196,11 @@ function AdminPage() {
         const response = await fetch(`http://localhost:8080/api/admin/deny-architect/${id}`, {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${token}`, // Include the token in the headers
+                'Authorization': `Bearer ${token}`,
             },
         });
         if (response.ok) {
-            fetchArchitectRequests(); // Refresh the list
+            fetchArchitectRequests();
         } else {
             console.error('Failed to deny architect');
         }
@@ -211,11 +210,11 @@ function AdminPage() {
         const response = await fetch(`http://localhost:8080/api/admin/approve-admin/${id}`, {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${token}`, // Include the token in the headers
+                'Authorization': `Bearer ${token}`,
             },
         });
         if (response.ok) {
-            fetchAdminRequests(); // Refresh the list
+            fetchAdminRequests();
         } else {
             console.error('Failed to approve admin');
         }
@@ -225,11 +224,11 @@ function AdminPage() {
         const response = await fetch(`http://localhost:8080/api/admin/deny-admin/${id}`, {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${token}`, // Include the token in the headers
+                'Authorization': `Bearer ${token}`,
             },
         });
         if (response.ok) {
-            fetchAdminRequests(); // Refresh the list
+            fetchAdminRequests();
         } else {
             console.error('Failed to deny admin');
         }
@@ -373,7 +372,6 @@ function AdminPage() {
                 </div>
             </div>
 
-            {/* Edit Reservation Modal */}
             {editingReservation && (
                 <div className="modal">
                     <div className="modal-content">

@@ -5,10 +5,6 @@ import com.coursework.model.Dream;
 public class DreamTemplateMapper {
 
     public DreamTemplateDto dreamToDreamTemplateDto(Dream dream) {
-        if (dream == null) {
-            return null;
-        }
-
         DreamTemplateDto dto = new DreamTemplateDto();
         dto.setId(dream.getId());
         dto.setName(dream.getName());
@@ -25,7 +21,6 @@ public class DreamTemplateMapper {
         dto.setArchitectName(dream.getArchitect().getUser().getUsername());
         dto.setArchitectRating(dream.getArchitect().getRating());
         dto.setArchitectPrice(dream.getArchitect().getPrice());
-
 
         return dto;
     }

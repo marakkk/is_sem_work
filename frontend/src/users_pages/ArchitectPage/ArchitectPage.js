@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import './ArchitectPage.css';
 
 function ArchitectPage() {
     const [architects, setRatings] = useState([]);
     const [newPrice, setNewPrice] = useState('');
     const [selectedDreamId, setSelectedDreamId] = useState(null);
-    const [history, setHistory] = useState([]); // State for architect's work history
+    const [history, setHistory] = useState([]);
     const navigate = useNavigate();
     const token = localStorage.getItem('token');
 
@@ -63,7 +63,7 @@ function ArchitectPage() {
                         'Content-Type': 'application/json',
                         Authorization: `Bearer ${token}`,
                     },
-                    body: JSON.stringify({ price: parseFloat(newPrice) }),
+                    body: JSON.stringify({price: parseFloat(newPrice)}),
                 });
 
                 if (response.ok) {
@@ -99,7 +99,7 @@ function ArchitectPage() {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`,
             },
-            body: JSON.stringify({ status: 'DONE' }),
+            body: JSON.stringify({status: 'DONE'}),
         });
 
         if (response.ok) {
@@ -157,7 +157,7 @@ function ArchitectPage() {
                                 <th>Дата</th>
                                 <th>Цена</th>
                                 <th>Статус</th>
-                                <th> </th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -169,7 +169,8 @@ function ArchitectPage() {
                                     <td>{item.status}</td>
                                     <td>
                                         {item.status !== 'Выполнено' && (
-                                            <button className="status-button" onClick={() => handleChangeStatus(item.reservationId)}>
+                                            <button className="status-button"
+                                                    onClick={() => handleChangeStatus(item.reservationId)}>
                                                 Изменить на DONE
                                             </button>
                                         )}

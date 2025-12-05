@@ -2,13 +2,11 @@ package com.coursework.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 public class ReservationDetailsDto {
-
     private Long reservationId;
     private String dreamName;
     private String timeEra;
@@ -24,11 +22,9 @@ public class ReservationDetailsDto {
     private String time;
     private String calendarStatus;
     private String timeOfReservation;
-    private String architectUsername; // New field
+    private String architectUsername;
     private String status;
     private List<CharactersDto> characters;
     private Long usersDreamsId;
     private Long architectId;
-
-
 }

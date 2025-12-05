@@ -2,9 +2,9 @@ package com.coursework.dto;
 
 import lombok.Data;
 import com.coursework.enums.CalendarStatus;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
+
 
 @Data
 public class CalendarDto {

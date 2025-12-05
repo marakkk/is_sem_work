@@ -26,7 +26,7 @@ public class DreamMapper {
         dto.setArchitectId(dream.getArchitect() != null ? dream.getArchitect().getId() : null);
         dto.setCharacters(
                 dream.getCharacters().stream()
-                        .map(character -> new CharactersDto()) // Дополните маппинг
+                        .map(character -> new CharactersDto())
                         .collect(Collectors.toList())
         );
 

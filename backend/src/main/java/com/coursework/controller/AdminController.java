@@ -6,22 +6,19 @@ import com.coursework.enums.AdminStatus;
 import com.coursework.enums.ReservationStatus;
 import com.coursework.service.AdminService;
 import com.coursework.service.ReservationService;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
 
     private final AdminService adminService;
-    private final ReservationService reservationService;
 
-    public AdminController(AdminService adminService, ReservationService reservationService) {
-        this.adminService = adminService;
-        this.reservationService = reservationService;
-    }
+    private final ReservationService reservationService;
 
     @GetMapping("/architect-requests")
     public ResponseEntity<List<ArchitectRequestDto>> getArchitectRequests() {

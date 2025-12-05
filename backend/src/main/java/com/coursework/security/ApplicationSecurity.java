@@ -25,13 +25,15 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 public class ApplicationSecurity {
 
     private final UserDetailsService userDetailsService;
+
     private final PasswordEncoder passwordEncoder;
+
     private final JWTAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(AbstractHttpConfigurer::disable) // Disable CSRF for APIs
+                .csrf(AbstractHttpConfigurer::disable)
                 .cors(cors -> cors.configure(http))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth

@@ -8,9 +8,9 @@ import lombok.Setter;
 @Setter
 @Data
 public class ReservationTemplateDto {
-    private Long originalTemplateId; // ID of the original template
-    private Long architectId;       // Architect associated with the template
-    private String date;            // Reservation date
-    private String time;            // Reservation time
-    private String timeOfReservation; // Timestamp for when the reservation is made
+    private Long originalTemplateId;
+    private Long architectId;
+    private String date;
+    private String time;
+    private String timeOfReservation;
 }

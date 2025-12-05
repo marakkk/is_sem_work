@@ -1,22 +1,22 @@
 package com.coursework.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
 import com.coursework.dto.ArchitectDto;
 import com.coursework.dto.DreamDto;
 import com.coursework.model.Architect;
 import com.coursework.model.Dream;
 import com.coursework.service.ArchitectService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/dreams/architect")
 public class ArchitectController {
+
     @Autowired
     private ArchitectService architectService;
 
@@ -59,6 +59,5 @@ public class ArchitectController {
     public List<ArchitectDto> getAllArchitects() {
         return architectService.getAllArchitects();
     }
-
 }
 

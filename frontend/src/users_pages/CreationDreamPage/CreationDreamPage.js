@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 import './CreationDreamPage.css';
-import { v4 as uuidv4 } from 'uuid';
+import {v4 as uuidv4} from 'uuid';
 
 function CreateDreamPage() {
     const [name, setName] = useState('');
@@ -126,18 +126,14 @@ function CreateDreamPage() {
         };
 
         try {
-            // Get existing dreams from localStorage
             const storedDreams = JSON.parse(localStorage.getItem('dreams')) || [];
 
-            // Add the new dream to the array
             storedDreams.push(dreamData);
 
-            // Save updated array back to localStorage
             localStorage.setItem('dreams', JSON.stringify(storedDreams));
 
             setSuccessMessage('Сон успешно сохранен в локальное хранилище!');
 
-            // Clear form fields
             setName('');
             setTimeEra('');
             setVirtualEnvironment('');
@@ -157,7 +153,6 @@ function CreateDreamPage() {
                 occupation: '',
             });
 
-            // Optionally navigate to another page if needed
             navigate(`/dreams/select-architect/${dreamId}`);
         } catch (error) {
             setErrorMessage('Произошла ошибка при сохранении сна в локальное хранилище.');

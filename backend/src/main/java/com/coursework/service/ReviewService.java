@@ -10,26 +10,23 @@ import com.coursework.repository.ArchitectureRepository;
 import com.coursework.repository.DreamRepository;
 import com.coursework.repository.ReviewRepository;
 import com.coursework.repository.UsersDreamRepository;
+import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+@AllArgsConstructor
 @Service
 public class ReviewService {
     private static final Logger logger = LoggerFactory.getLogger(ReviewService.class);
 
-
     private final ReviewRepository reviewRepository;
-    private final ArchitectureRepository architectureRepository;
-    private final UsersDreamRepository usersDreamRepository;
-    private final DreamRepository dreamRepository;
 
-    public ReviewService(ReviewRepository reviewRepository, ArchitectureRepository architectureRepository, UsersDreamRepository usersDreamRepository, DreamRepository dreamRepository) {
-        this.reviewRepository = reviewRepository;
-        this.architectureRepository = architectureRepository;
-        this.usersDreamRepository = usersDreamRepository;
-        this.dreamRepository = dreamRepository;
-    }
+    private final ArchitectureRepository architectureRepository;
+
+    private final UsersDreamRepository usersDreamRepository;
+
+    private final DreamRepository dreamRepository;
 
     @Transactional
     public void submitReview(ReviewDto reviewRequestDto) {
@@ -39,18 +36,15 @@ public class ReviewService {
 
         logger.info("Received review request: " + reviewRequestDto);
 
-        Architect architect = architectureRepository.findById(reviewRequestDto.getArchitectId())
-                .orElseThrow(() -> new IllegalArgumentException("Invalid architect ID"));
+        Architect architect = architectureRepository.findById(reviewRequestDto.getArchitectId()).orElseThrow(() -> new IllegalArgumentException("Invalid architect ID"));
 
         logger.info("Found architect: " + architect);
 
-        Dream dream = dreamRepository.findById(reviewRequestDto.getUsersDreamsId())
-                .orElseThrow(() -> new IllegalArgumentException("Invalid dream ID"));
+        Dream dream = dreamRepository.findById(reviewRequestDto.getUsersDreamsId()).orElseThrow(() -> new IllegalArgumentException("Invalid dream ID"));
 
         logger.info("Found dream: " + dream);
 
-        UsersDream usersDream = usersDreamRepository.findById(reviewRequestDto.getUsersDreamsId())
-                .orElseThrow(() -> new IllegalArgumentException("UsersDream not found for the given dream"));
+        UsersDream usersDream = usersDreamRepository.findById(reviewRequestDto.getUsersDreamsId()).orElseThrow(() -> new IllegalArgumentException("UsersDream not found for the given dream"));
 
         logger.info("Found usersDream: " + usersDream);
 

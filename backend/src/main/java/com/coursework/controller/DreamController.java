@@ -1,17 +1,16 @@
 package com.coursework.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
 import com.coursework.dto.DreamDto;
 import com.coursework.dto.DreamTemplateDto;
 import com.coursework.dto.DreamUserDto;
 import com.coursework.model.Characters;
 import com.coursework.service.DreamService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
 
 @RestController
@@ -26,8 +25,8 @@ public class DreamController {
         try {
             dreamService.createOwnDream(dreamDto, request);
             return ResponseEntity.status(HttpStatus.CREATED).build();
-        } catch (ResponseStatusException e) {
 
+        } catch (ResponseStatusException e) {
             return ResponseEntity.status(e.getStatusCode()).body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -50,7 +49,6 @@ public class DreamController {
         List<Characters> characters = dreamService.getCharactersByDreamId(dreamId);
         return ResponseEntity.ok(characters);
     }
-
 
 }
 

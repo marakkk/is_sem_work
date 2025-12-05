@@ -10,5 +10,4 @@ import java.util.Optional;
 @Repository
 public interface UsersDreamRepository extends JpaRepository<UsersDream, Long> {
     Optional<UsersDream> findByDream(Dream dream);
-
 }

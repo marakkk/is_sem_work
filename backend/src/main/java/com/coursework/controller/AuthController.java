@@ -4,6 +4,7 @@ import com.coursework.enums.AdminStatus;
 import com.coursework.model.DreamUser;
 import com.coursework.repository.UserRepository;
 import com.coursework.service.AuthService;
+import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -13,18 +14,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
-    private final AuthService authService;
-    private final UserRepository userRepository;
 
-    public AuthController(AuthService authService, UserRepository userRepository) {
-        this.authService = authService;
-        this.userRepository = userRepository;
-    }
+    private final AuthService authService;
+
+    private final UserRepository userRepository;
 
     @PostMapping("/register")
     public ResponseEntity<Void> register(@RequestBody DreamUser user) {
