@@ -18,6 +18,7 @@ public class ReservationDto {
     private String role;
     private String genre;
     private String scenario;
+    private Long collectivePartner;
 
     @Getter
     @Setter

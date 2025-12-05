@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import './LoginForm.css';
 
-function LoginForm({onLogin}) {
+function LoginForm() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -44,8 +44,6 @@ function LoginForm({onLogin}) {
                 localStorage.setItem('token', token);
                 localStorage.setItem('username', username);
                 localStorage.setItem('role', role);
-
-                onLogin(token);
 
                 if (role === 'ADMIN') {
                     navigate('/dreams/admin-page');

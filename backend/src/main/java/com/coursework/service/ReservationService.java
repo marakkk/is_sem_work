@@ -121,6 +121,7 @@ public class ReservationService {
         reservation.setUser(creator);
         reservation.setCalendar(calendar);
         reservation.setArchitect(architect);
+        reservation.setCollectivePartner(reservationDto.getCollectivePartner());
 
         return reservationRepository.save(reservation);
     }

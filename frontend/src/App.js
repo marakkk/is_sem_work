@@ -14,21 +14,12 @@ import ConfirmReservationPage from "./users_pages/ConfirmReservationPage/Confirm
 import AdminPage from "./users_pages/AdminPage/AdminPage";
 
 function App() {
-    const [setToken] = useState(null);
-    const [setUsername] = useState('');
-    const storedUsername = sessionStorage.getItem('username');
-
-    useEffect(() => {
-        if (storedUsername) {
-            setUsername(storedUsername);
-        }
-    }, []);
 
     return (
         <Router>
             <div className="App">
                 <Routes>
-                    <Route path="/login" element={<LoginForm onLogin={setToken}/>}/>
+                    <Route path="/login" element={<LoginForm/>}/>
                     <Route path="/register" element={<RegisterForm/>}/>
                     <Route path="/" element={<Navigate to="/login"/>}/>
 

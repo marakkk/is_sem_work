@@ -31,10 +31,13 @@ public class ReservationController {
             Reservation reservation = reservationService.createReservation(reservationDto, request);
             return ResponseEntity.status(HttpStatus.CREATED).body(reservation);
         } catch (ResponseStatusException e) {
+            e.printStackTrace();
             return ResponseEntity.status(e.getStatusCode()).body(e.getReason());
         } catch (IllegalArgumentException e) {
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("An unexpected error occurred while creating the reservation.");
         }
