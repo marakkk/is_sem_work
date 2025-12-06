@@ -2,7 +2,7 @@ package com.coursework.service;
 
 import com.coursework.dto.DreamDto;
 import com.coursework.dto.DreamTemplateDto;
-import com.coursework.dto.DreamTemplateMapper;
+import com.coursework.mappers.DreamTemplateMapper;
 import com.coursework.dto.DreamUserDto;
 import com.coursework.enums.*;
 import com.coursework.model.Characters;

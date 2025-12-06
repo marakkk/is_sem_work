@@ -1,5 +1,6 @@
-package com.coursework.dto;
+package com.coursework.mappers;
 
+import com.coursework.dto.ArchitectRequestDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

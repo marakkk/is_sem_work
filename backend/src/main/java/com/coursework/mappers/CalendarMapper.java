@@ -1,4 +1,4 @@
-package com.coursework.dto;
+package com.coursework.mappers;
 
 import com.coursework.model.Calendar;
 import org.springframework.stereotype.Component;

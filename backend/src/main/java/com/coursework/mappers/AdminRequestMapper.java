@@ -1,5 +1,6 @@
-package com.coursework.dto;
+package com.coursework.mappers;
 
+import com.coursework.dto.AdminRequestDto;
 import com.coursework.model.Admin;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

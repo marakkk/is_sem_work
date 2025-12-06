@@ -13,8 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,35 +25,14 @@ public class ReservationController {
 
     @PostMapping("/confirm")
     public ResponseEntity<?> createReservation(@RequestBody ReservationDto reservationDto, HttpServletRequest request) {
-        try {
-            Reservation reservation = reservationService.createReservation(reservationDto, request);
-            return ResponseEntity.status(HttpStatus.CREATED).body(reservation);
-        } catch (ResponseStatusException e) {
-            e.printStackTrace();
-            return ResponseEntity.status(e.getStatusCode()).body(e.getReason());
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An unexpected error occurred while creating the reservation.");
-        }
+        Reservation reservation = reservationService.createReservation(reservationDto, request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(reservation);
     }
 
     @PostMapping("/confirm-template")
     public ResponseEntity<?> createTemplateReservation(@RequestBody ReservationTemplateDto templateDto, HttpServletRequest request) {
-        try {
-            Reservation reservation = reservationService.createTemplateReservation(templateDto, request);
-            return ResponseEntity.status(HttpStatus.CREATED).body(reservation);
-        } catch (ResponseStatusException e) {
-            return ResponseEntity.status(e.getStatusCode()).body(e.getReason());
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An unexpected error occurred while creating the template reservation.");
-        }
+        Reservation reservation = reservationService.createTemplateReservation(templateDto, request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(reservation);
     }
 
     @GetMapping("/history")
@@ -75,20 +52,16 @@ public class ReservationController {
             @RequestParam String time,
             @RequestParam(required = false) String status
     ) {
-        try {
-            List<Calendar> calendarEntries = reservationService.getCalendarEntries(date, time, status);
-            List<CalendarDto> response = calendarEntries.stream()
-                    .map(entry -> new CalendarDto(
-                            entry.getId(),
-                            entry.getDate(),
-                            entry.getTime(),
-                            entry.getStatus()
-                    ))
-                    .collect(Collectors.toList());
-            return ResponseEntity.ok(response);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Collections.emptyList());
-        }
+        List<Calendar> calendarEntries = reservationService.getCalendarEntries(date, time, status);
+        List<CalendarDto> response = calendarEntries.stream()
+                .map(entry -> new CalendarDto(
+                        entry.getId(),
+                        entry.getDate(),
+                        entry.getTime(),
+                        entry.getStatus()
+                ))
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(response);
     }
 
     @PutMapping("/update-status/{reservationId}")

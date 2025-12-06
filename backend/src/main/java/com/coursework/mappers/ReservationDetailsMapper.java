@@ -1,5 +1,8 @@
-package com.coursework.dto;
+package com.coursework.mappers;
 
+import com.coursework.dto.ArchitectDto;
+import com.coursework.dto.DreamDto;
+import com.coursework.dto.ReservationDetailsDto;
 import com.coursework.model.Reservation;
 import com.coursework.model.UsersDream;
 import com.coursework.repository.UsersDreamRepository;

@@ -1,5 +1,6 @@
-package com.coursework.dto;
+package com.coursework.mappers;
 
+import com.coursework.dto.DreamTemplateDto;
 import com.coursework.model.Dream;
 
 public class DreamTemplateMapper {

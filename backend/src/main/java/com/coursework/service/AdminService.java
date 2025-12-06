@@ -4,8 +4,8 @@ import jakarta.persistence.NoResultException;
 import jakarta.transaction.Transactional;
 import com.coursework.dto.AdminRequestDto;
 import com.coursework.dto.ArchitectRequestDto;
-import com.coursework.dto.AdminRequestMapper;
-import com.coursework.dto.ArchitectRequestMapper;
+import com.coursework.mappers.AdminRequestMapper;
+import com.coursework.mappers.ArchitectRequestMapper;
 import com.coursework.enums.AdminStatus;
 import com.coursework.model.Admin;
 import com.coursework.model.Architect;
@@ -40,16 +40,14 @@ public class AdminService {
 
     @Transactional
     public void updateArchitectStatus(Long architectId, AdminStatus status) {
-        Architect architect = architectureRepository.findById(architectId)
-                .orElseThrow(() -> new NoResultException("Architect not found"));
+        Architect architect = architectureRepository.findById(architectId).orElseThrow(() -> new NoResultException("Architect not found"));
         architect.setStatus(status);
         architectureRepository.save(architect);
     }
 
     @Transactional
     public void updateAdminStatus(Long adminId, AdminStatus status) {
-        Admin admin = adminRepository.findById(adminId)
-                .orElseThrow(() -> new NoResultException("Admin not found"));
+        Admin admin = adminRepository.findById(adminId).orElseThrow(() -> new NoResultException("Admin not found"));
         admin.setStatus(status);
         adminRepository.save(admin);
     }

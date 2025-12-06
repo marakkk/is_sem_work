@@ -1,7 +1,7 @@
 package com.coursework.service;
 
 import com.coursework.dto.ReservationDetailsDto;
-import com.coursework.dto.ReservationDetailsMapper;
+import com.coursework.mappers.ReservationDetailsMapper;
 import com.coursework.dto.ReservationDto;
 import com.coursework.dto.ReservationTemplateDto;
 import com.coursework.enums.*;

@@ -1,5 +1,6 @@
-package com.coursework.dto;
+package com.coursework.mappers;
 
+import com.coursework.dto.ArchitectDto;
 import com.coursework.model.Architect;
 import org.springframework.stereotype.Component;
 

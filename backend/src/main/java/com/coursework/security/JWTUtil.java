@@ -4,6 +4,8 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -12,17 +14,22 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 import java.util.function.Function;
 
+@RequiredArgsConstructor
 @Component
 public class JWTUtil {
-    private static final long EXPIRATION_TIME = 86400000;
-    private static final String SECRET_KEY = "pipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupu";
+
+    @Value("${jwt.secret}")
+    private static String secretKey;
+
+    @Value("${jwt.expiration-time}")
+    private static long expirationTime;
 
     public static String generateToken(UserDetails userDetails) {
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
+                .setExpiration(new Date(System.currentTimeMillis() + expirationTime))
+                .signWith(SignatureAlgorithm.HS512, secretKey)
                 .compact();
     }
 
@@ -59,7 +66,7 @@ public class JWTUtil {
 
     private static Claims getClaims(String token) {
         return Jwts.parser()
-                .setSigningKey(SECRET_KEY)
+                .setSigningKey(secretKey)
                 .build()
                 .parseClaimsJws(token)
                 .getBody();

@@ -1,5 +1,7 @@
-package com.coursework.dto;
+package com.coursework.mappers;
 
+import com.coursework.dto.CharactersDto;
+import com.coursework.dto.DreamDto;
 import com.coursework.model.Dream;
 import org.springframework.stereotype.Component;
 

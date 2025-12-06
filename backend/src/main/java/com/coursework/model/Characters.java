@@ -12,7 +12,6 @@ public class Characters {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private String name;
     private String characteristics;
     private String appearance;

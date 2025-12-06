@@ -21,7 +21,6 @@ public class ReviewController {
 
     private static final Logger logger = LoggerFactory.getLogger(ReviewController.class);
 
-
     @PostMapping("/reviews")
     public ResponseEntity<Object> submitReview(@RequestBody ReviewDto reviewDto) {
         try {
@@ -30,9 +29,9 @@ public class ReviewController {
 
             return ResponseEntity.status(HttpStatus.CREATED).build();
         } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Произошла ошибка при отправке отзыва");
+            logger.error("Failed to submit review for dream {}: {}",
+                    reviewDto.getUsersDreamsId(), e.getMessage(), e);
+            throw e;
         }
     }
 
