@@ -22,16 +22,19 @@ jobs:
           java-version: "21"
 
       - name: Run Checkstyle
-        uses: Noxocode/action-checkstyle@v1
+        uses: dbelyaev/action-checkstyle@v1.3.2
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          level: warning
           checkstyle_config: google_checks.xml
           fail_on_error: true
 
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: mvn -B package --file is_sem_work/backend/pom.xml
 
       - name: Run tests
-        run: mvn -B test --file pom.xml
+        run: mvn -B test --file is_sem_work/backend/pom.xml
 
   security:
     name: CodeQL Security Scan
