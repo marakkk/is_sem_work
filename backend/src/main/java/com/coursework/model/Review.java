@@ -21,3 +21,4 @@ public class Review {
     @JoinColumn(name = "architect_id", nullable = false)
     private Architect architect;
 }
+

@@ -66,11 +66,4 @@ public class Dream {
     @JoinColumn(name = "creator_id")
     private DreamUser creator;
 
-    @ManyToMany
-    @JoinTable(
-            name = "users_dreams",
-            joinColumns = @JoinColumn(name = "dream_id"),
-            inverseJoinColumns = @JoinColumn(name = "users_id")
-    )
-    private Set<DreamUser> dreamUsers;
 }

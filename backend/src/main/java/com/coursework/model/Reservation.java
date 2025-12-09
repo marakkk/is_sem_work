@@ -37,8 +37,9 @@ public class Reservation {
     @JsonBackReference("reservation-calendar")
     private Calendar calendar;
 
-    @Column(name = "collective_partner")
-    private Long collectivePartner;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "collective_partner_id")
+    private DreamUser collectivePartner;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "architect_id", nullable = false)
