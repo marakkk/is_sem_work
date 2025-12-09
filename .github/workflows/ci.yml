@@ -22,7 +22,7 @@ jobs:
           java-version: "21"
 
       - name: Run Checkstyle
-        uses: dbelyaev/action-checkstyle@v1.3.1
+        uses: dbelyaev/action-checkstyle@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-check
@@ -31,10 +31,10 @@ jobs:
           fail_on_error: true
 
       - name: Build with Maven
-        run: mvn -B package --file is_sem_work/backend/pom.xml
+        run: mvn -B package --file backend/pom.xml
 
       - name: Run tests
-        run: mvn -B test --file is_sem_work/backend/pom.xml
+        run: mvn -B test --file backend/pom.xml
 
   security:
     name: CodeQL Security Scan
@@ -56,7 +56,7 @@ jobs:
           languages: java
 
       - name: Build
-        run: mvn -B package --file is_sem_work/backend/pom.xml
+        run: mvn -B package --file backend/pom.xml
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
