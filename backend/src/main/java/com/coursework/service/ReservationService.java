@@ -182,9 +182,9 @@ public class ReservationService {
         if (creator.getRole() == Roles.ARCHITECT) {
             Architect architect = architectRepository.findByUserId(creator.getId()).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Architect not found"));
 
-            reservations = reservationRepository.findReservationsByArchitectId(architect.getId());
+            reservations = reservationRepository.findByArchitectId(architect.getId());
         } else {
-            reservations = reservationRepository.findReservationsByUserId(creator.getId());
+            reservations = reservationRepository.findByUserId(creator.getId());
         }
 
         return reservations.stream().map(reservationMapper::toDetailsDto).collect(Collectors.toList());

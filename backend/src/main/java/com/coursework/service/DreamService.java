@@ -99,7 +99,7 @@ public class DreamService {
 
     @Transactional
     public List<DreamTemplateDto> getTemplateDreams() {
-        List<Dream> dreams = dreamRepository.findTemplateDreamsWithArchitect();
+        List<Dream> dreams = dreamRepository.findByTemplateTrue();
 
         DreamTemplateMapper mapper = new DreamTemplateMapper();
 

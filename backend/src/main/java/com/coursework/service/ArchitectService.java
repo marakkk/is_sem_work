@@ -34,7 +34,7 @@ public class ArchitectService {
     private final CharactersRepository charactersRepository;
 
     @Autowired
-    private final ReservationRepository reservationRepository;
+    private final ReviewRepository reviewRepository;
 
     @Autowired
     private final UsersDreamRepository usersDreamRepository;
@@ -48,14 +48,20 @@ public class ArchitectService {
     }
 
     public List<ArchitectDto> getAllArchitects() {
-        return architectureRepository.findAllWithUserDetails().stream().map(architect -> new ArchitectDto(architect.getId(), architect.getUser().getUsername(), architect.getPrice(), architect.getRating())).collect(Collectors.toList());
+        return architectureRepository.findAll().stream()
+                .map(a -> new ArchitectDto(
+                        a.getId(),
+                        a.getUser().getUsername(),
+                        a.getPrice(),
+                        a.getRating()))
+                .collect(Collectors.toList());
     }
 
     public List<Architect> getArchitectRatings() {
         List<Architect> architects = architectureRepository.findAll();
         for (Architect architect : architects) {
             try {
-                Double averageRating = architectureRepository.getAverageRatingForArchitect(architect);
+                Double averageRating = getAverageRating(architect);
 
                 if (averageRating != null) {
                     architect.setRating(averageRating.intValue());
@@ -125,4 +131,10 @@ public class ArchitectService {
         dreamRepository.save(dream);
     }
 
+    public double getAverageRating(Architect architect) {
+        return reviewRepository.findByArchitect(architect).stream()
+                .mapToInt(Review::getMark)
+                .average()
+                .orElse(0.0);
+    }
 }
