@@ -1,0 +1,205 @@
+.create-template-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.create-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 20px;
+    grid-auto-rows: minmax(100px, auto);
+
+}
+
+.form-left, .form-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.form-left div, .form-right div {
+    margin-bottom: 15px;
+}
+
+.form-left label, .form-right label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-left input,
+.form-left select,
+.form-right input,
+.form-right select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-right h3 {
+    margin-bottom: 15px;
+}
+
+.form-right ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-right ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-right ul li button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    border-radius: 4px;
+}
+
+.form-right ul li button:hover {
+    background-color: #d32f2f;
+}
+
+.form-right ul li button:last-child {
+    background-color: #00796b;
+}
+
+.form-right ul li button:last-child:hover {
+    background-color: #004d40;
+}
+
+button[type="submit"] {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: rgba(71, 79, 145, 0.5);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: rgba(71, 79, 145, 0.5);
+}
+
+h3 {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.create-dream-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 20px;
+    overflow-y: auto;
+    height: 80vh;
+}
+
+.create-dream-page form div {
+    margin-bottom: 15px;
+}
+
+button[type="button"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(71, 79, 145, 0.5);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: rgba(71, 79, 145, 0.5);
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.create-dream-page form .form-left {
+    gap: 25px;
+}
+
+.create-dream-page form .form-right {
+    gap: 20px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .create-form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .create-dream-page {
+        padding: 10px;
+    }
+
+    .form-left, .form-right {
+        gap: 15px;
+    }
+
+    button[type="submit"] {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    button[type="button"] {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+.success-message {
+    margin-top: 15px;
+    padding: 10px;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    font-size: 14px;
+}

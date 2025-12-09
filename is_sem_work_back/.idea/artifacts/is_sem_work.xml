@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-war" name="is_sem_work">
-    <output-path>$PROJECT_DIR$/out/artifacts/is_sem_work</output-path>
-    <root id="root" />
-  </artifact>
-</component>

@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e5e5e5;
+}
+
+.select-template-container {
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #f3f3f7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-button {
+    background-color: #9b7bd4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #7a63c7;
+}
+
+/* New container for the scrollable table */
+.template-table-container {
+    width: 100%;
+    max-height: 400px; /* Limit the height of the table */
+    overflow-y: auto;  /* Enable scrolling */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+/* Table styling */
+.template-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.template-table th,
+.template-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.template-table th {
+    background-color: #9b7bd4;
+    color: white;
+    font-weight: bold;
+}
+
+.template-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.template-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* No templates text */
+.no-templates {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    font-weight: bold;
+}
+
+/* Style for the radio buttons */
+input[type="radio"] {
+    appearance: none; /* Remove default styles */
+    width: 10px;
+    height: 10px;
+    border: 2px solid #9b7bd4;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Circle fills with blue when selected */
+input[type="radio"]:checked {
+    background-color: #9b7bd4;
+    border-color: #7a63c7;
+}
+
