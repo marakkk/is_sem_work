@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45a853c9-aaae-4a1a-951a-66491f5cd267" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/coursework/security/ApplicationSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/coursework/security/ApplicationSecurity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +30,12 @@
     &quot;assignee&quot;: &quot;ksenijavidakovic&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:marakkk/is_sem_work.git",
-    "accountId": "98c69f5d-169b-44b4-ac83-874c10ae3190"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:marakkk/is_sem_work.git&quot;,
+    &quot;accountId&quot;: &quot;98c69f5d-169b-44b4-ac83-874c10ae3190&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -64,9 +65,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.Main.executor": "Run",
-    "git-widget-placeholder": "ref-step-1",
+    "git-widget-placeholder": "ref-step-3",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/marakkk/study/refactoring/is_sem_work/is_sem_work_back",
+    "last_opened_file_path": "/home/marakkk/study/diploma/backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -152,6 +153,7 @@
       <workItem from="1736903408164" duration="14700000" />
       <workItem from="1763726023860" duration="203000" />
       <workItem from="1764952463213" duration="29000" />
+      <workItem from="1765313783695" duration="597000" />
     </task>
     <task id="LOCAL-00001" summary="changes">
       <option name="closed" value="true" />
