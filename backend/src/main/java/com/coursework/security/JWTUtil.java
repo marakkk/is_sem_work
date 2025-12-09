@@ -18,18 +18,12 @@ import java.util.function.Function;
 @Component
 public class JWTUtil {
 
-    @Value("${jwt.secret}")
-    private static String secretKey;
-
-    @Value("${jwt.expiration-time}")
-    private static long expirationTime;
-
     public static String generateToken(UserDetails userDetails) {
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + expirationTime))
-                .signWith(SignatureAlgorithm.HS512, secretKey)
+                .setExpiration(new Date(System.currentTimeMillis() + 86400000))
+                .signWith(SignatureAlgorithm.HS512, "pipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupu")
                 .compact();
     }
 
@@ -66,7 +60,7 @@ public class JWTUtil {
 
     private static Claims getClaims(String token) {
         return Jwts.parser()
-                .setSigningKey(secretKey)
+                .setSigningKey("pipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupupipipupu")
                 .build()
                 .parseClaimsJws(token)
                 .getBody();

@@ -102,12 +102,11 @@ public class GlobalExceptionHandler {
     }
 
     private String getCurrentRequestPath() {
-        HttpServletRequest request =
-                ((HttpServletRequest) org.springframework.web.context.request
-                        .RequestContextHolder.getRequestAttributes());
-        return request.getRequestURI();
-
+        var requestAttributes = org.springframework.web.context.request.RequestContextHolder.getRequestAttributes();
+        if (requestAttributes instanceof org.springframework.web.context.request.ServletRequestAttributes servletAttrs) {
+            return servletAttrs.getRequest().getRequestURI();
+        }
+        return "N/A";
     }
-
 
 }
