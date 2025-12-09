@@ -1,5 +1,6 @@
 package com.coursework.dto;
 
+import com.coursework.model.DreamUser;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +19,7 @@ public class ReservationDto {
     private String role;
     private String genre;
     private String scenario;
-    private Long collectivePartner;
+    private DreamUser collectivePartner;
 
     @Getter
     @Setter

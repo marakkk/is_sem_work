@@ -1,5 +1,6 @@
 package com.coursework.model;
 
+import com.coursework.enums.AdminStatus;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -24,4 +25,7 @@ public class Architect {
     @Column(name = "rating")
     private int rating;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = false)
+    private AdminStatus status;
 }
